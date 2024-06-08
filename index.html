@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./output.css" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header class="flex justify-between p-10 sticky top-0">
+      <h1 class="text-3xl">Panda Guy 🐼</h1>
+      <nav class="gap-5 text-xl hidden lg:flex">
+        <a href="#" class="hover:border-b-4 hover:border-black">Home</a>
+        <a href="#" class="hover:border-b-4 hover:border-black">Skills</a>
+        <a href="#" class="hover:border-b-4 hover:border-black">About</a>
+        <a href="#" class="hover:border-b-4 hover:border-black">works</a>
+        <a href="#" class="hover:border-b-4 hover:border-black">Contact</a>
+      </nav>
+      <label for="isOpen" class="lg:hidden">
+        <input type="checkbox" class="peer hidden" id="isOpen" />
+        <img
+          class="max-w-10 peer-checked:hidden relative z-10"
+          src="./assets/icons/more.png"
+          alt=""
+        />
+        <img
+          class="max-w-10 hidden peer-checked:block relative z-10"
+          src="./assets/icons/x-mark.png"
+          alt=""
+        />
+        <nav
+          class="gap-5 text-xl absolute flex-col top-1 right-1 p-24 items-center border-black border-2 bg-white peer-checked:flex hidden"
+        >
+          <a href="#" class=" ">Home</a>
+          <a href="#" class=" ">About</a>
+          <a href="#" class=" ">Skills</a>
+          <a href="#" class=" ">Works</a>
+          <a href="#" class=" ">Contact</a>
+        </nav>
+      </label>
+    </header>
+    <main>
+      <section id="hero" class="grid p-10 bg-hero-pattern">
+        <!-- <div><img src="./assets/images/SBA_1294.jpg" alt="" /></div> -->
+        <div>
+          <h2>Hi, I'm Igwedinma Ifechukwu Divine</h2>
+          <h2>Frontend Web Developer</h2>
+
+          Crafting intuitive and visually stunning web experiences. From game
+          development aspirations to web innovation, I turn ideas into reality
+          with code. Let's create something amazing together!
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
