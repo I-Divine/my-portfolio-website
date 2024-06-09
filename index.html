@@ -9,15 +9,15 @@
   </head>
   <body>
     <header
-      class="flex justify-between p-5 fixed z-10 w-full bg-neutral-500 top-0"
+      class="flex justify-between p-5 fixed z-10 w-full bg-neutral-900 top-0"
     >
-      <h1 class="text-3xl">Panda Guy 🐼</h1>
+      <h1 class="text-3xl text-white">Panda Guy 🐼</h1>
       <nav class="gap-5 text-xl hidden lg:flex">
-        <a href="#" class="hover:border-b-4 hover:border-black">Home</a>
-        <a href="#" class="hover:border-b-4 hover:border-black">Skills</a>
-        <a href="#" class="hover:border-b-4 hover:border-black">About</a>
-        <a href="#" class="hover:border-b-4 hover:border-black">works</a>
-        <a href="#" class="hover:border-b-4 hover:border-black">Contact</a>
+        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">Home</a>
+        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">Skills</a>
+        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">About</a>
+        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">works</a>
+        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">Contact</a>
       </nav>
       <label for="isOpen" class="lg:hidden">
         <input type="checkbox" class="peer hidden" id="isOpen" />
@@ -44,23 +44,48 @@
     </header>
     <main>
       <div
-        class="mt-16 bg-center md:bg-left bg-[url('/assets/images/SBA_1294.jpg')] h-screen backdrop-blur-2xl bg-cover bg-no-repeat"
+        class="mt-16 bg-center md:bg-left bg-[url('/assets/images/SBA_1294.jpg')] h-[calc(100vh-4rem)] backdrop-blur-2xl bg-cover bg-no-repeat"
       >
-        <section id="hero" class="grid p-10 h-full backdrop-brightness-50">
+        <section id="hero" class="grid p-10 h-full backdrop-brightness-[.4]">
           <!-- <div><img src="./assets/images/SBA_1294.jpg" alt="" /></div> -->
           <div class="max-w-96">
             <h2 class="text-3xl text-lime-500">Hi, I'm</h2>
             <h2 class="text-3xl text-white">Igwedinma Ifechukwu Divine</h2>
             <h2 class="text-3xl text-lime-500">Frontend Web Developer</h2>
             <p class="text-xl mt-5 text-white">
-              Crafting intuitive and visually stunning web experiences. From
-              game development aspirations to web innovation, I turn ideas into
-              reality with code. Let's create something amazing together!
+              Crafting intuitive and visually stunning web experiences. Turning
+              ideas into reality with code. Let's create something amazing
+              together!
             </p>
           </div>
         </section>
       </div>
-      <div class="h-screen">.</div>
+      <section class="p-10 bg-gradient-to-tl from-zinc-800 to-neutral-950">
+        <h2 class="text-white text-3xl">Skills</h2>
+        <h2 class="text-lime-500 text-3xl">What I can do ?</h2>
+        <p class="text-white">
+        <ul>
+          <li class="text-white list-none my-4">Transform Designs into Websites: Convert beautiful designs into fully functional, responsive websites.</li>
+          <li class="text-white list-none my-4">Build Web App Templates: Develop reusable and scalable templates for web applications.</li>
+          <li class="text-white list-none my-4">Bring Businesses Online: Create professional websites that enhance online presence and drive business growth.</li>
+          <li class="text-white list-none my-4">Custom Website Development: Design and build personalized websites tailored to individual needs.</li>
+        </ul>
+
+
+
+        <h2 class="text-lime-500 text-3xl">My Expertise</h2>
+        <p class=" text-white">
+          <ul>
+            <li class="text-white my-4">Frontend Development: Proficient in HTML, CSS, JavaScript, React, and Tailwind, I bring creativity and functionality together to deliver exceptional web solutions.</li>
+            <li class="text-white my-4">Past Projects: I've worked with various technologies including Unity for game development, C# for scripting, Django templating language for backend integration, as well as C++, C, Java, and Python for diverse programming tasks.</li>
+            <li class="text-white my-4">Learning Next: I am always eager to expand my skill set. Currently, I am looking forward to mastering PHP, Laravel, Next.js, and Firebase to enhance my development capabilities.</li>
+          </ul>
+          
+
+
+        </p>
+        </p>
+      </section>
     </main>
   </body>
 </html>
