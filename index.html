@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-p-10 scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./output.css" />
@@ -9,30 +9,44 @@
   </head>
   <body>
     <header
-      class="flex justify-between p-5 fixed z-10 w-full bg-neutral-900 top-0"
+      class="fixed top-0 z-10 flex w-full justify-between bg-neutral-900 p-5"
     >
       <h1 class="text-3xl text-white">Panda Guy 🐼</h1>
-      <nav class="gap-5 text-xl hidden lg:flex">
-        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">Home</a>
-        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">Skills</a>
-        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">About</a>
-        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">works</a>
-        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600">Contact</a>
+      <nav class="hidden gap-5 text-xl lg:flex">
+        <a
+          href="#hero"
+          class="text-white hover:border-b-4 hover:border-lime-600"
+          >Home</a
+        >
+        <a
+          href="#skills"
+          class="text-white hover:border-b-4 hover:border-lime-600"
+          >Skills</a
+        >
+        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600"
+          >About</a
+        >
+        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600"
+          >Works</a
+        >
+        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600"
+          >Contact</a
+        >
       </nav>
       <label for="isOpen" class="lg:hidden">
         <input type="checkbox" class="peer hidden" id="isOpen" />
         <img
-          class="max-w-10 peer-checked:hidden relative z-10"
+          class="relative z-10 max-w-10 peer-checked:hidden"
           src="./assets/icons/more.svg"
           alt=""
         />
         <img
-          class="max-w-10 hidden peer-checked:block relative z-10"
+          class="relative z-10 hidden max-w-10 peer-checked:block"
           src="./assets/icons/square.svg"
           alt=""
         />
         <nav
-          class="gap-5 text-xl absolute flex-col top-1 right-1 p-24 items-center border-black border-2 bg-white peer-checked:flex hidden"
+          class="absolute right-1 top-1 hidden flex-col items-center gap-5 border-2 border-black bg-white p-24 text-xl peer-checked:flex"
         >
           <a href="#" class=" ">Home</a>
           <a href="#" class=" ">About</a>
@@ -43,16 +57,65 @@
       </label>
     </header>
     <main>
-      <div
-        class="mt-16 bg-center md:bg-left bg-[url('/assets/images/SBA_1294.jpg')] h-[calc(100vh-4rem)] backdrop-blur-2xl bg-cover bg-no-repeat"
+      <a
+        href="/assets/document/Resume.pdf" download=""
+        class="group fixed bottom-10 right-16 z-10 flex items-center rounded-full bg-black p-5 text-sm text-black transition-all"
       >
-        <section id="hero" class="grid p-10 h-full backdrop-brightness-[.4]">
+        <div class="relative">
+          <span
+            class="absolute bottom-5 right-1/2 w-max translate-x-1/2 rounded bg-none p-2 text-lg font-semibold text-lime-400 opacity-0 transition-all delay-100 group-hover:bottom-10 group-hover:block group-hover:opacity-100"
+            >Download Resume !!!</span
+          >
+        </div>
+
+        <svg
+          class="top-12 max-w-10 fill-white group-hover:fill-lime-500"
+          version="1.0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="512.000000pt"
+          viewBox="0 0 512.000000 512.000000"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <g
+            class="fill-white group-hover:fill-lime-500"
+            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+            fill="#000000"
+            stroke="none"
+          >
+            <path
+              d="M2510 4389 c-32 -13 -87 -66 -108 -104 -15 -27 -17 -122 -22 -1038
+       l-5 -1007 -345 346 c-226 227 -359 353 -385 365 -72 33 -163 17 -224 -41 -33
+       -32 -61 -98 -61 -145 0 -87 13 -102 563 -653 287 -288 540 -534 562 -547 56
+       -32 102 -38 160 -20 46 13 89 54 601 567 536 537 552 554 563 604 30 128 -68
+       254 -198 254 -80 0 -92 -9 -463 -379 l-358 -355 0 1002 c0 1086 2 1041 -53
+       1100 -51 55 -157 79 -227 51z"
+            />
+            <path
+              d="M870 1724 c-46 -20 -77 -50 -103 -99 -19 -36 -22 -60 -25 -242 -7
+       -333 17 -459 110 -599 78 -117 202 -208 343 -251 57 -17 131 -18 1390 -18
+       l1330 0 75 23 c105 33 196 89 271 169 77 82 122 164 149 269 17 67 20 111 20
+       344 0 260 -1 268 -23 311 -66 125 -235 145 -331 39 -19 -21 -39 -56 -45 -77
+       -6 -22 -11 -139 -11 -273 0 -206 -3 -240 -19 -275 -23 -51 -79 -101 -128 -114
+       -56 -16 -2528 -15 -2574 0 -51 18 -97 55 -122 102 -21 40 -22 57 -27 307 -5
+       284 -8 296 -62 347 -54 51 -149 67 -218 37z"
+            />
+          </g>
+        </svg>
+      </a>
+      <div
+        class="mt-16 h-[calc(100vh-4rem)] bg-[url('/assets/images/SBA_1294_2.jpg')] bg-cover bg-center bg-no-repeat backdrop-blur-2xl md:bg-left"
+      >
+        <section id="hero" class="grid h-full p-10 backdrop-brightness-[.4]">
           <!-- <div><img src="./assets/images/SBA_1294.jpg" alt="" /></div> -->
-          <div class="max-w-96">
-            <h2 class="text-3xl text-lime-500">Hi, I'm</h2>
-            <h2 class="text-3xl text-white">Igwedinma Ifechukwu Divine</h2>
-            <h2 class="text-3xl text-lime-500">Frontend Web Developer</h2>
-            <p class="text-xl mt-5 text-white">
+          <div class="max-w-md">
+            <h2 class="font-serif text-3xl text-lime-500">Hi, I'm</h2>
+            <h2 class="font-serif text-3xl text-white">
+              Igwedinma Ifechukwu Divine
+            </h2>
+            <h2 class="font-serif text-3xl text-lime-500">
+              Frontend Web Developer
+            </h2>
+            <p class="mt-5 text-xl text-white">
               Crafting intuitive and visually stunning web experiences. Turning
               ideas into reality with code. Let's create something amazing
               together!
@@ -60,31 +123,56 @@
           </div>
         </section>
       </div>
-      <section class="p-10 bg-gradient-to-tl from-zinc-700 to-neutral-950">
-        <h2 class="text-white text-3xl">Skills</h2>
-        <h2 class="text-lime-500 text-3xl">What I can do ?</h2>
+      <section
+        id="skills"
+        class="bg-gradient-to-tl from-zinc-700 to-neutral-950 p-10"
+      >
+        <h2 class="font-serif text-3xl text-white">Skills</h2>
+        <h2 class="font-serif text-3xl text-lime-500">What I can do ?</h2>
         <p class="text-white">
-        <ul>
-          <li class="text-white list-none my-4">Transform Designs into Websites: Convert beautiful designs into fully functional, responsive websites.</li>
-          <li class="text-white list-none my-4">Build Web App Templates: Develop reusable and scalable templates for web applications.</li>
-          <li class="text-white list-none my-4">Bring Businesses Online: Create professional websites that enhance online presence and drive business growth.</li>
-          <li class="text-white list-none my-4">Custom Website Development: Design and build personalized websites tailored to individual needs.</li>
-        </ul>
-
-
-
-        <h2 class="text-lime-500 text-3xl">My Expertise</h2>
-        <p class=" text-white">
           <ul>
-            <li class="text-white my-4">Frontend Development: Proficient in HTML, CSS, JavaScript, React, and Tailwind, I bring creativity and functionality together to deliver exceptional web solutions.</li>
-            <li class="text-white my-4">Past Projects: I've worked with various technologies including Unity for game development, C# for scripting, Django templating language for backend integration, as well as C++, C, Java, and Python for diverse programming tasks.</li>
-            <li class="text-white my-4">Learning Next: I am always eager to expand my skill set. Currently, I am looking forward to mastering PHP, Laravel, Next.js, and Firebase to enhance my development capabilities.</li>
-          </ul>
-          
-
-
+          <li class="my-4 list-none text-white">
+            Transform Designs into Websites: Convert beautiful designs into
+            fully functional, responsive websites.
+          </li>
+          <li class="my-4 list-none text-white">
+            Build Web App Templates: Develop reusable and scalable templates for
+            web applications.
+          </li>
+          <li class="my-4 list-none text-white">
+            Bring Businesses Online: Create professional websites that enhance
+            online presence and drive business growth.
+          </li>
+          <li class="my-4 list-none text-white">
+            Custom Website Development: Design and build personalized websites
+            tailored to individual needs.
+          </li>
+        </ul>
         </p>
+        
+
+        <h2 class="font-serif text-3xl text-lime-500">My Expertise</h2>
+        <p class="text-white">
+          <ul>
+          <li class="my-4 text-white">
+            Frontend Development: Proficient in HTML, CSS, JavaScript, React,
+            and Tailwind, I bring creativity and functionality together to
+            deliver exceptional web solutions.
+          </li>
+          <li class="my-4 text-white">
+            Past Projects: I've worked with various technologies including Unity
+            for game development, C# for scripting, Django templating language
+            for backend integration, as well as C++, C, Java, and Python for
+            diverse programming tasks.
+          </li>
+          <li class="my-4 text-white">
+            Learning Next: I am always eager to expand my skill set. Currently,
+            I am looking forward to mastering PHP, Laravel, Next.js, and
+            Firebase to enhance my development capabilities.
+          </li>
+        </ul>
         </p>
+        
       </section>
     </main>
   </body>
