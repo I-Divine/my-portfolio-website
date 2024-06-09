@@ -3,15 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./output.css" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/panda.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>PandaGuy</title>
+    <style>
+      .toWhite{
+        background-color: white;
+      }
+      .toWhite g{
+        fill:black;
+      }
+      .hide{
+        opacity: 0.01;
+        filter: blur(5px);
+        transform: translateY(10rem);
+        transition: all 500ms ease;
+      }
+      .reveal{
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0rem);
+      }
+    </style>
   </head>
   <body>
     <header
-      class="fixed top-0 z-10 flex w-full justify-between bg-neutral-900 p-5"
+      class=" fixed top-0 z-10 flex w-full justify-between bg-gradient-to-r from-neutral-800 to-black p-5"
     >
-      <h1 class="text-3xl text-white">Panda Guy 🐼</h1>
+      <h1 class="text-3xl text-white flex">Panda Guy <img class="max-w-12 transition-all delay-100 hover:translate-x-4 " src="/assets/icons/panda.png" alt=""></h1>
       <nav class="hidden gap-5 text-xl lg:flex">
         <a
           href="#hero"
@@ -23,7 +42,7 @@
           class="text-white hover:border-b-4 hover:border-lime-600"
           >Skills</a
         >
-        <a href="#" class="text-white hover:border-b-4 hover:border-lime-600"
+        <a href="#about" class="text-white hover:border-b-4 hover:border-lime-600"
           >About</a
         >
         <a href="#" class="text-white hover:border-b-4 hover:border-lime-600"
@@ -57,13 +76,13 @@
       </label>
     </header>
     <main>
-      <a
+      <a id="resume-download"
         href="/assets/document/Resume.pdf" download=""
         class="group fixed bottom-10 right-16 z-10 flex items-center rounded-full bg-black p-5 text-sm text-black transition-all"
       >
         <div class="relative">
           <span
-            class="absolute bottom-5 right-1/2 w-max translate-x-1/2 rounded bg-none p-2 text-lg font-semibold text-lime-400 opacity-0 transition-all delay-100 group-hover:bottom-10 group-hover:block group-hover:opacity-100"
+            class="absolute bottom-5 right-1/2 w-max translate-x-1/2 rounded bg-none p-2 text-lg font-semibold text-lime-400 opacity-0 transition-all delay-200 group-hover:bottom-10 group-hover:block group-hover:opacity-100"
             >Download Resume !!!</span
           >
         </div>
@@ -103,19 +122,19 @@
         </svg>
       </a>
       <div
-        class="mt-16 h-[calc(100vh-4rem)] bg-[url('/assets/images/SBA_1294_2.jpg')] bg-cover bg-center bg-no-repeat backdrop-blur-2xl lg:bg-left"
+        class="mt-16 h-[calc(100dvh-4rem)] bg-[url('/assets/images/SBA_1294_2.jpg')] bg-cover bg-center bg-no-repeat backdrop-blur-2xl lg:bg-left"
       >
-        <section id="hero" class="flex justify-center items-end md:items-center h-full p-10 backdrop-brightness-[.4]">
+        <section id="hero" class=" flex justify-center items-end md:items-center h-full p-10 backdrop-brightness-[.4]">
           <!-- <div><img src="./assets/images/SBA_1294.jpg" alt="" /></div> -->
-          <div class="max-w-md">
-            <h2 class="font-serif text-center text-3xl text-lime-500">Hi, I'm</h2>
-            <h2 class="font-serif text-center text-3xl text-white">
+          <div class="max-w-lg">
+            <h2 class="hide font-serif text-center text-5xl text-lime-500">Hi, I'm</h2>
+            <h2 class="hide font-serif text-center text-5xl text-white">
               Igwedinma Ifechukwu Divine
             </h2>
-            <h2 class="font-serif text-3xl text-center text-lime-500">
+            <h2 class="hide font-serif text-5xl text-center text-lime-500">
               Frontend Web Developer
             </h2>
-            <p class="mt-5 text-xl text-center text-white">
+            <p class="hide mt-5 text-xl text-center text-white">
               Crafting intuitive and visually stunning web experiences. Turning
               ideas into reality with code. Let's create something amazing
               together!
@@ -125,25 +144,25 @@
       </div>
       <section
         id="skills"
-        class="bg-gradient-to-tl from-zinc-700 to-neutral-950 p-10"
+        class="target bg-gradient-to-tl from-zinc-800 to-neutral-950 p-10"
       >
-        <h2 class="font-serif text-3xl text-white">Skills</h2>
-        <h2 class="font-serif text-3xl text-lime-500">What I can do ?</h2>
-        <p class="text-white">
+        <h2 class="hide font-serif text-3xl text-white">Skills</h2>
+        <h2 class="hide font-serif text-3xl text-lime-500">What I can do ?</h2>
+        <p class=" text-white">
           <ul>
-          <li class="my-4 list-none text-white">
+          <li class="hide my-4 text-xl list-none text-white">
             Transform Designs into Websites: Convert beautiful designs into
             fully functional, responsive websites.
           </li>
-          <li class="my-4 list-none text-white">
+          <li class="hide my-4 text-xl list-none text-white">
             Build Web App Templates: Develop reusable and scalable templates for
             web applications.
           </li>
-          <li class="my-4 list-none text-white">
+          <li class="hide my-4 text-xl list-none text-white">
             Bring Businesses Online: Create professional websites that enhance
             online presence and drive business growth.
           </li>
-          <li class="my-4 list-none text-white">
+          <li class="hide my-4 text-xl list-none text-white">
             Custom Website Development: Design and build personalized websites
             tailored to individual needs.
           </li>
@@ -151,21 +170,21 @@
         </p>
         
 
-        <h2 class="font-serif text-3xl text-lime-500">My Expertise</h2>
-        <p class="text-white">
+        <h2 class="hide font-serif text-3xl text-lime-500">My Expertise</h2>
+        <p class="hide text-white">
           <ul>
-          <li class="my-4 text-white">
+          <li class="hide my-4 text-xl text-white">
             Frontend Development: Proficient in HTML, CSS, JavaScript, React,
             and Tailwind, I bring creativity and functionality together to
             deliver exceptional web solutions.
           </li>
-          <li class="my-4 text-white">
+          <li class="hide my-4 text-xl text-white">
             Past Projects: I've worked with various technologies including Unity
             for game development, C# for scripting, Django templating language
             for backend integration, as well as C++, C, Java, and Python for
             diverse programming tasks.
           </li>
-          <li class="my-4 text-white">
+          <li class="hide my-4 text-xl text-white">
             Learning Next: I am always eager to expand my skill set. Currently,
             I am looking forward to mastering PHP, Laravel, Next.js, and
             Firebase to enhance my development capabilities.
@@ -174,6 +193,45 @@
         </p>
         
       </section>
+      <section id="about" class=" observed-component p-10 bg-black blacked">
+        <h2 class="hide text-white font-serif text-3xl">About</h2>
+        <h2 class="hide text-lime-500 font-serif text-3xl">Little yap about my self</h2>
+      <p class="text-xl hide  my-4 text-white"> Hello! I'm Igwedinma Ifechukwu Divine a passionate Frontend Web Developer with a deep love for programming. I thrive on transforming complex problems into elegant, user-friendly solutions through code. My journey in web development began with a curiosity about websites and has evolved into a career focused on creating intuitive and visually appealing digital experiences.</p>  
+      <p class="text-xl hide my-4 text-white">Beyond work, I'm an avid chess player, always eager for strategic challenges. Drawing lets me express my creativity, while fitness activities like going to the gym, football (soccer), and basketball keep me active and teach the importance of teamwork and perseverance.</p>
+      <p class="text-xl hide my-4 text-white">As a person, I'm reserved yet open-minded. I value deep conversations and enjoy different perspectives. My focus and adaptability help me continuously learn and grow as a developer. Thank you for visiting my portfolio! If you're interested in working together or connecting, feel free to reach out. Let's create something amazing together!</p>
+      </section>
     </main>
+    <script defer>
+      const option = {
+        root : null,
+        rootMargin : "0px",
+        threshold : 0.25,
+      }
+      const resumeDownloadBtn = document.getElementById("resume-download")
+      const revealObserver = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+          console.log(entry)
+          if(entry.isIntersecting){
+            entry.target.classList.add("reveal")
+          }
+        })
+      },option)
+      const blackElObserver = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+          if(entry.isIntersecting){
+            // console.log(entry)
+            resumeDownloadBtn.classList.add("toWhite")
+          }else{
+            resumeDownloadBtn.classList.remove("toWhite")
+            // console.log("not intersecting")
+          }
+          
+        })
+      }, option)
+      const blackElements = document.querySelectorAll(".blacked")
+      const hiddenElements = document.querySelectorAll(".hide")
+      hiddenElements.forEach((element)=>revealObserver.observe(element))
+      blackElements.forEach((element)=>blackElObserver.observe(element))
+    </script>
   </body>
 </html>
