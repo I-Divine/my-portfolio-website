@@ -8,7 +8,9 @@
     <title>Vite App</title>
   </head>
   <body>
-    <header class="flex justify-between p-10 sticky top-0">
+    <header
+      class="flex justify-between p-5 fixed z-10 w-full bg-neutral-500 top-0"
+    >
       <h1 class="text-3xl">Panda Guy 🐼</h1>
       <nav class="gap-5 text-xl hidden lg:flex">
         <a href="#" class="hover:border-b-4 hover:border-black">Home</a>
@@ -21,12 +23,12 @@
         <input type="checkbox" class="peer hidden" id="isOpen" />
         <img
           class="max-w-10 peer-checked:hidden relative z-10"
-          src="./assets/icons/more.png"
+          src="./assets/icons/more.svg"
           alt=""
         />
         <img
           class="max-w-10 hidden peer-checked:block relative z-10"
-          src="./assets/icons/x-mark.png"
+          src="./assets/icons/square.svg"
           alt=""
         />
         <nav
@@ -41,17 +43,24 @@
       </label>
     </header>
     <main>
-      <section id="hero" class="grid p-10 bg-hero-pattern">
-        <!-- <div><img src="./assets/images/SBA_1294.jpg" alt="" /></div> -->
-        <div>
-          <h2>Hi, I'm Igwedinma Ifechukwu Divine</h2>
-          <h2>Frontend Web Developer</h2>
-
-          Crafting intuitive and visually stunning web experiences. From game
-          development aspirations to web innovation, I turn ideas into reality
-          with code. Let's create something amazing together!
-        </div>
-      </section>
+      <div
+        class="mt-16 bg-center md:bg-left bg-[url('/assets/images/SBA_1294.jpg')] h-screen backdrop-blur-2xl bg-cover bg-no-repeat"
+      >
+        <section id="hero" class="grid p-10 h-full backdrop-brightness-50">
+          <!-- <div><img src="./assets/images/SBA_1294.jpg" alt="" /></div> -->
+          <div class="max-w-96">
+            <h2 class="text-3xl text-lime-500">Hi, I'm</h2>
+            <h2 class="text-3xl text-white">Igwedinma Ifechukwu Divine</h2>
+            <h2 class="text-3xl text-lime-500">Frontend Web Developer</h2>
+            <p class="text-xl mt-5 text-white">
+              Crafting intuitive and visually stunning web experiences. From
+              game development aspirations to web innovation, I turn ideas into
+              reality with code. Let's create something amazing together!
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="h-screen">.</div>
     </main>
   </body>
 </html>
