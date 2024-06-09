@@ -2795,6 +2795,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:items-center {
+    align-items: center;
+  }
+
   .md\:bg-left {
     background-position: left;
   }
@@ -2807,6 +2811,14 @@ video {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:items-center {
+    align-items: center;
+  }
+
+  .lg\:bg-left {
+    background-position: left;
   }
 }
 
