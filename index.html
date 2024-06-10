@@ -14,8 +14,8 @@
         fill:black;
       }
       .hide{
-        opacity: 0.01;
-        filter: blur(5px);
+        opacity: 0.25;
+        filter: blur(3px);
         transform: translateY(10rem);
         transition: all 500ms ease;
       }
@@ -78,7 +78,7 @@
     <main>
       <a id="resume-download"
         href="/assets/document/Resume.pdf" download=""
-        class="group fixed bottom-10 right-10 z-10 flex items-center rounded-full bg-black p-5 text-sm text-black transition-all"
+        class="group fixed bottom-10 right-10 z-10 flex items-center rounded-full bg-black p-5 text-sm text-black transition-all duration-500 delay-100"
       >
         <div class="relative">
           <span
@@ -193,19 +193,32 @@
         </p>
         
       </section>
-      <section id="about" class=" observed-component p-10 bg-black blacked">
+      <section id="about" class=" grid justify-center observed-component p-10 bg-black blacked">
+
         <h2 class="hide text-white font-serif text-3xl">About</h2>
         <h2 class="hide text-lime-500 font-serif text-3xl">Little yap about my self</h2>
-      <p class="text-xl hide  my-4 text-white"> Hello! I'm Igwedinma Ifechukwu Divine a passionate Frontend Web Developer with a deep love for programming. I thrive on transforming complex problems into elegant, user-friendly solutions through code. My journey in web development began with a curiosity about websites and has evolved into a career focused on creating intuitive and visually appealing digital experiences.</p>  
-      <p class="text-xl hide my-4 text-white">Beyond work, I'm an avid chess player, always eager for strategic challenges. Drawing lets me express my creativity, while fitness activities like going to the gym, football (soccer), and basketball keep me active. </p>
-      <p class="text-xl hide my-4 text-white">As a person, I'm reserved yet open-minded. I value deep conversations and enjoy different perspectives. My focus and adaptability help me continuously learn and grow as a developer. Thank you for visiting my portfolio! If you're interested in working together or connecting, feel free to reach out. Let's create something amazing together!</p>
+        <div class="">
+      <p class="text-xl delay-75 max-w-4xl hide my-4 text-white"> Hello! I'm Igwedinma Ifechukwu Divine a passionate Frontend Web Developer with a deep love for programming. I thrive on transforming complex problems into elegant, user-friendly solutions through code.</p>  
+      <p class="text-xl delay-100 max-w-4xl hide my-4 text-white">Beyond work, I'm an avid chess player, always eager for strategic challenges. Drawing lets me express my creativity, while fitness activities like going to the gym, football (soccer), and basketball keep me active. </p>
+      <p class="text-xl delay-150 max-w-4xl hide my-4 text-white">As a person, I'm reserved yet open-minded. I value deep conversations and enjoy different perspectives. My focus and adaptability help me continuously learn and grow as a developer. Thank you for visiting my portfolio! If you're interested in working together or connecting, feel free to reach out. Let's create something amazing together!</p>
+        </div>
+      
+      </section>
+      <section class="  p-10 bg-black blacked">
+        <h2 class="font-serif text-3xl">Works</h2>
+        <h2>Projects I worked on</h2>
+        <div class="">
+<div>
+
+</div>
+        </div>
       </section>
     </main>
     <script defer>
       const option = {
         root : null,
         rootMargin : "0px",
-        threshold : 0.25,
+        threshold : 0.1,
       }
       const resumeDownloadBtn = document.getElementById("resume-download")
       const revealObserver = new IntersectionObserver((entries)=>{
