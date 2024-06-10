@@ -683,8 +683,8 @@ video {
   right: 50%;
 }
 
-.right-16 {
-  right: 4rem;
+.right-10 {
+  right: 2.5rem;
 }
 
 .start-1 {
@@ -701,10 +701,6 @@ video {
 
 .top-12 {
   top: 3rem;
-}
-
-.right-10 {
-  right: 2.5rem;
 }
 
 .isolate {
@@ -770,6 +766,11 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .mt-16 {
@@ -895,6 +896,10 @@ video {
   height: 0.5rem;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .h-\[calc\(100dvh-4rem\)\] {
   height: calc(100dvh - 4rem);
 }
@@ -903,8 +908,24 @@ video {
   height: 100%;
 }
 
+.h-\[50vh\] {
+  height: 50vh;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
 .w-1 {
   width: 0.25rem;
+}
+
+.w-\[90vw\] {
+  width: 90vw;
 }
 
 .w-\[this-is\\\\\] {
@@ -928,9 +949,8 @@ video {
   width: max-content;
 }
 
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
+.w-1\/3 {
+  width: 33.333333%;
 }
 
 .max-w-10 {
@@ -941,28 +961,16 @@ video {
   max-width: 3rem;
 }
 
-.max-w-lg {
-  max-width: 32rem;
-}
-
-.max-w-md {
-  max-width: 28rem;
-}
-
-.max-w-xl {
-  max-width: 36rem;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
-}
-
-.max-w-5xl {
-  max-width: 64rem;
-}
-
 .max-w-4xl {
   max-width: 56rem;
+}
+
+.max-w-64 {
+  max-width: 16rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .flex-shrink {
@@ -1007,6 +1015,16 @@ video {
 
 .translate-x-1\/2 {
   --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-3\/4 {
+  --tw-translate-y: 75%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-full {
+  --tw-translate-y: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1312,6 +1330,10 @@ video {
   grid-auto-flow: column dense;
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1498,6 +1520,18 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-20 {
+  gap: 5rem;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1820,6 +1854,10 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -1968,8 +2006,21 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.25\)\] {
+  background-color: rgba(0,0,0,0.25);
+}
+
+.bg-lime-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 204 22 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\/assets\/images\/SBA_1294_2\.jpg\'\)\] {
   background-image: url('/assets/images/SBA_1294_2.jpg');
+}
+
+.bg-\[url\(\/assets\/images\/FindIt-Screenshot\.png\)\] {
+  background-image: url(/assets/images/FindIt-Screenshot.png);
 }
 
 .bg-gradient-to-r {
@@ -1982,6 +2033,14 @@ video {
 
 .bg-none {
   background-image: none;
+}
+
+.bg-\[url\(\/assets\/images\/easyBank-Screenshot\.png\)\] {
+  background-image: url(/assets/images/easyBank-Screenshot.png);
+}
+
+.bg-\[url\(\/assets\/images\/getlinked-Screenshot\.png\)\] {
+  background-image: url(/assets/images/getlinked-Screenshot.png);
 }
 
 .from-neutral-800 {
@@ -2059,6 +2118,14 @@ video {
 
 .bg-center {
   background-position: center;
+}
+
+.bg-left {
+  background-position: left;
+}
+
+.bg-right {
+  background-position: right;
 }
 
 .bg-repeat {
@@ -2334,6 +2401,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-lime-700 {
+  --tw-text-opacity: 1;
+  color: rgb(77 124 15 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2666,12 +2738,12 @@ video {
   transition-delay: 100ms;
 }
 
-.delay-200 {
-  transition-delay: 200ms;
-}
-
 .delay-150 {
   transition-delay: 150ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
 }
 
 .delay-75 {
@@ -2797,6 +2869,11 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:translate-y-0:hover {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:border-b-4:hover {
   border-bottom-width: 4px;
 }
@@ -2834,6 +2911,19 @@ video {
 
 .group:hover .group-hover\:block {
   display: block;
+}
+
+.group:hover .group-hover\:translate-y-0 {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:bg-transparent {
+  background-color: transparent;
+}
+
+.group:hover .group-hover\:bg-none {
+  background-image: none;
 }
 
 .group:hover .group-hover\:fill-lime-500 {
@@ -2875,6 +2965,14 @@ video {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .lg\:bg-left {
