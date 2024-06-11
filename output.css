@@ -2015,6 +2015,30 @@ video {
   background-image: none;
 }
 
+.bg-\[url\(\/assets\/images\/quizApp-Screenshot\.png\)\] {
+  background-image: url(/assets/images/quizApp-Screenshot.png);
+}
+
+.bg-\[url\(\/assets\/images\/SojiPortfolio-Screenshot\.png\)\] {
+  background-image: url(/assets/images/SojiPortfolio-Screenshot.png);
+}
+
+.bg-\[url\(\/assets\/images\/JerryPortfolio-Screenshot\.png\)\] {
+  background-image: url(/assets/images/JerryPortfolio-Screenshot.png);
+}
+
+.bg-\[url\(\/assets\/images\/flappy-bird-Screenshot\.png\)\] {
+  background-image: url(/assets/images/flappy-bird-Screenshot.png);
+}
+
+.bg-\[url\(\/assets\/images\/StatNerd-Screenshot\.png\)\] {
+  background-image: url(/assets/images/StatNerd-Screenshot.png);
+}
+
+.bg-\[url\(\/assets\/images\/calculator-Screenshot\.png\)\] {
+  background-image: url(/assets/images/calculator-Screenshot.png);
+}
+
 .from-neutral-800 {
   --tw-gradient-from: #262626 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(38 38 38 / 0) var(--tw-gradient-to-position);
