@@ -3,10 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./output.css" />
+
     <link rel="icon" type="image/svg+xml" href="/assets/icons/panda.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PandaGuy</title>
     <style>
+      @font-face {
+        font-family: "Aire Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/assets/fonts/SVN-Aire-Pro-Regular.otf) format("otf");
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Aire Pro", Cambria, Cochin, Georgia, Times,
+          "Times New Roman", serif;
+      }
       .divBlur {
         backdrop-filter: blur(5px) brightness(0.25);
       }
@@ -33,7 +55,7 @@
     <header
       class="fixed top-0 z-10 flex w-full justify-between bg-gradient-to-r from-neutral-800 to-black p-5"
     >
-      <h1 class="flex text-3xl text-white">
+      <h1 class="font-secondary flex text-3xl text-white">
         Panda Guy
         <img
           class="max-w-12 transition-all delay-100 hover:translate-x-4"
@@ -146,16 +168,18 @@
         >
           <!-- <div><img src="./assets/images/SBA_1294.jpg" alt="" /></div> -->
           <div class="max-w-lg">
-            <h2 class="hide text-center font-serif text-5xl text-lime-500">
+            <h2 class="hide font-display text-center text-5xl text-lime-500">
               Hi, I'm
             </h2>
-            <h2 class="hide text-center font-serif text-5xl text-white">
+            <h2 class="hide font-display text-center text-5xl text-white">
               Igwedinma Ifechukwu Divine
             </h2>
-            <h2 class="hide text-center font-serif text-5xl text-lime-500">
+            <h2 class="hide font-display text-center text-5xl text-lime-500">
               Frontend Web Developer
             </h2>
-            <p class="hide mt-5 text-center text-xl text-white">
+            <p
+              class="hide font-primary font-primary mt-5 text-center text-xl text-white"
+            >
               Crafting intuitive and visually stunning web experiences. Turning
               ideas into reality with code. Let's create something amazing
               together!
@@ -167,42 +191,52 @@
         id="skills"
         class="target grid justify-center bg-gradient-to-tl from-zinc-800 to-neutral-950 p-10 text-center md:text-justify"
       >
-        <h2 class="hide font-serif text-3xl text-white">Skills</h2>
-        <h2 class="hide font-serif text-3xl text-lime-500">What I can do ?</h2>
+        <h2 class="hide font-display text-3xl text-white">Skills</h2>
+        <h2 class="hide font-display text-3xl text-lime-500">
+          What I can do ?
+        </h2>
 
         <ul>
-          <li class="hide my-4 max-w-4xl list-none text-xl text-white">
+          <li
+            class="hide font-primary my-4 max-w-4xl list-none text-lg text-white"
+          >
             Transform Designs into Websites: Convert beautiful designs into
             fully functional, responsive websites.
           </li>
-          <li class="hide my-4 max-w-4xl list-none text-xl text-white">
+          <li
+            class="hide font-primary my-4 max-w-4xl list-none text-lg text-white"
+          >
             Build Web App Templates: Develop reusable and scalable templates for
             web applications.
           </li>
-          <li class="hide my-4 max-w-4xl list-none text-xl text-white">
+          <li
+            class="hide font-primary my-4 max-w-4xl list-none text-lg text-white"
+          >
             Bring Businesses Online: Create professional websites that enhance
             online presence and drive business growth.
           </li>
-          <li class="hide my-4 max-w-4xl list-none text-xl text-white">
+          <li
+            class="hide font-primary my-4 max-w-4xl list-none text-lg text-white"
+          >
             Custom Website Development: Design and build personalized websites
             tailored to individual needs.
           </li>
         </ul>
 
-        <h2 class="hide font-serif text-3xl text-lime-500">My Expertise</h2>
+        <h2 class="hide font-display text-3xl text-lime-500">My Expertise</h2>
         <ul>
-          <li class="hide my-4 max-w-4xl text-xl text-white">
+          <li class="hide font-primary my-4 max-w-4xl text-lg text-white">
             Frontend Development: Proficient in HTML, CSS, JavaScript, React,
             and Tailwind, I bring creativity and functionality together to
             deliver exceptional web solutions.
           </li>
-          <li class="hide my-4 max-w-4xl text-xl text-white">
+          <li class="hide font-primary my-4 max-w-4xl text-lg text-white">
             Past Projects: I've worked with various technologies including Unity
             for game development, C# for scripting, Django templating language
             for backend integration, as well as C++, C, Java, and Python for
             diverse programming tasks.
           </li>
-          <li class="hide my-4 max-w-4xl text-xl text-white">
+          <li class="hide font-primary my-4 max-w-4xl text-lg text-white">
             Learning Next: I am always eager to expand my skill set. Currently,
             I am looking forward to mastering PHP, Laravel, Next.js, and
             Firebase to enhance my development capabilities.
@@ -214,23 +248,29 @@
         id="about"
         class="blacked grid justify-center bg-black p-10 text-center md:text-justify"
       >
-        <h2 class="hide font-serif text-3xl text-white">About</h2>
-        <h2 class="hide font-serif text-3xl text-lime-500">
+        <h2 class="hide font-display text-3xl text-white">About</h2>
+        <h2 class="hide font-display text-3xl text-lime-500">
           Little yap about my self
         </h2>
         <div class="">
-          <p class="hide my-4 max-w-4xl text-lg text-white delay-75">
+          <p
+            class="hide font-primary my-4 max-w-4xl text-lg text-white delay-75"
+          >
             Hello! I'm Igwedinma Ifechukwu Divine a passionate Frontend Web
             Developer with a deep love for programming. I thrive on transforming
             complex problems into elegant, user-friendly solutions through code.
           </p>
-          <p class="hide my-4 max-w-4xl text-lg text-white delay-100">
+          <p
+            class="hide font-primary my-4 max-w-4xl text-lg text-white delay-100"
+          >
             Beyond work, I'm an avid chess player, always eager for strategic
             challenges. Drawing lets me express my creativity, while fitness
             activities like going to the gym, football (soccer), and basketball
             keep me active.
           </p>
-          <p class="hide my-4 max-w-4xl text-lg text-white delay-150">
+          <p
+            class="hide font-primary my-4 max-w-4xl text-lg text-white delay-150"
+          >
             As a person, I'm reserved yet open-minded. I value deep
             conversations and enjoy different perspectives. My focus and
             adaptability help me continuously learn and grow as a developer.
@@ -242,8 +282,8 @@
       </section>
       <section id="projects" class="grid justify-center p-10">
         <div class="w-[90vw] max-w-4xl">
-          <h2 class="font-serif text-3xl">Works</h2>
-          <h2 class="font-serif text-3xl text-lime-700">
+          <h2 class="font-display text-3xl">Works</h2>
+          <h2 class="font-display text-3xl text-lime-700">
             Projects I worked on
           </h2>
           <div class="my-6 grid justify-center gap-16 lg:grid-cols-1">
@@ -254,8 +294,8 @@
                 class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
               >
                 <div class="max-w-80">
-                  <h2 class="font-serif text-3xl text-lime-500">FindIt</h2>
-                  <p class="my-4">
+                  <h2 class="font-display text-3xl text-lime-500">FindIt</h2>
+                  <p class="font-primary my-4">
                     FindIt, lost and found system, connects owners to their lost
                     items as seamlessly and easily as possible
                   </p>
@@ -286,10 +326,10 @@
                 class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
               >
                 <div class="max-w-80">
-                  <h2 class="font-serif text-3xl text-lime-500">
+                  <h2 class="font-display text-3xl text-lime-500">
                     Easy Bank Landing Page
                   </h2>
-                  <p class="my-4">
+                  <p class="font-primary my-4">
                     This is my solution to the Frontend mentor challenge Easy
                     Bank Landing Page
                   </p>
@@ -320,8 +360,8 @@
                 class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
               >
                 <div class="max-w-80">
-                  <h2 class="font-serif text-3xl text-lime-500">Getlinked</h2>
-                  <p class="my-4">
+                  <h2 class="font-display text-3xl text-lime-500">Getlinked</h2>
+                  <p class="font-primary my-4">
                     This is my solution to a design challenge hackathon, I found
                     on twitter
                   </p>
@@ -352,8 +392,8 @@
                 class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
               >
                 <div class="max-w-80">
-                  <h2 class="font-serif text-3xl text-lime-500">Quiz App</h2>
-                  <p class="my-4">
+                  <h2 class="font-display text-3xl text-lime-500">Quiz App</h2>
+                  <p class="font-primary my-4">
                     This is a quiz application that display question, collects
                     the users answers and display his/her score.
                   </p>
@@ -384,10 +424,10 @@
                 class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
               >
                 <div class="max-w-80">
-                  <h2 class="font-serif text-3xl text-lime-500">
+                  <h2 class="font-display text-3xl text-lime-500">
                     Redesigned Soji's Portfolio
                   </h2>
-                  <p class="my-4">
+                  <p class="font-primary my-4">
                     My friend Soji needed a new portfolio, so I helped him
                     implement his new design for the portfolio website.
                   </p>
@@ -418,10 +458,10 @@
                 class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
               >
                 <div class="max-w-80">
-                  <h2 class="font-serif text-3xl text-lime-500">
+                  <h2 class="font-display text-3xl text-lime-500">
                     Jerry's Portfolio
                   </h2>
-                  <p class="my-4">
+                  <p class="font-primary my-4">
                     Jerry needed a portfolio website quick for an application,
                     luckily I came to the rescue. Built this in 24hrs without a
                     design lol.
@@ -453,8 +493,10 @@
                 class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
               >
                 <div class="max-w-80">
-                  <h2 class="font-serif text-3xl text-lime-500">Flappy Bird</h2>
-                  <p class="my-4">
+                  <h2 class="font-display text-3xl text-lime-500">
+                    Flappy Bird
+                  </h2>
+                  <p class="font-primary my-4">
                     It's just flappy bird, lol, built it myself and I'm proud of
                     it, I learnt a lot. The physics classes actually came in
                     handy. Not mobile friendly though.
@@ -486,10 +528,10 @@
                 class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
               >
                 <div class="max-w-80">
-                  <h2 class="font-serif text-3xl text-lime-500">
+                  <h2 class="font-display text-3xl text-lime-500">
                     Stat-Nerd App
                   </h2>
-                  <p class="my-4">
+                  <p class="font-primary my-4">
                     I built this because STAT 101 assignment was a bit
                     challenging all the time. It's not much but if you struggle
                     in statistics class you might find this helpful
@@ -520,10 +562,10 @@
                 class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
               >
                 <div class="max-w-80">
-                  <h2 class="font-serif text-3xl text-lime-500">
+                  <h2 class="font-display text-3xl text-lime-500">
                     Calculator App
                   </h2>
-                  <p class="my-4">
+                  <p class="font-primary my-4">
                     This probably the prettiest calculator app you've ever seen.
                     This my solution to a frontend mentor project. Try changing
                     the themes :)
