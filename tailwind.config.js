@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['"Ubuntu"', ...defaultTheme.fontFamily.sans],
-        secondary: ['"Mitr"', ...defaultTheme.fontFamily.sans],
+        primary: ['"Lato"', ...defaultTheme.fontFamily.sans],
+        secondary: ['"Raleway"', ...defaultTheme.fontFamily.sans],
         display: ['"Raleway"', ...defaultTheme.fontFamily.serif],
       },
       backgroundImage: {
