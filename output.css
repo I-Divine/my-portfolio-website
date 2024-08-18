@@ -1326,10 +1326,6 @@ video {
   grid-auto-flow: column dense;
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1520,10 +1516,6 @@ video {
 
 .gap-10 {
   gap: 2.5rem;
-}
-
-.gap-16 {
-  gap: 4rem;
 }
 
 .gap-4 {
@@ -1850,6 +1842,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -2024,6 +2020,10 @@ video {
   background-image: url('/assets/images/SBA_1294_2.jpg');
 }
 
+.bg-\[url\(\/assets\/images\/Budbrand-Screenshot\.png\)\] {
+  background-image: url(/assets/images/Budbrand-Screenshot.png);
+}
+
 .bg-\[url\(\/assets\/images\/FindIt-Screenshot\.png\)\] {
   background-image: url(/assets/images/FindIt-Screenshot.png);
 }
@@ -2066,10 +2066,6 @@ video {
 
 .bg-gradient-to-tl {
   background-image: linear-gradient(to top left, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\/assets\/images\/Budbrand-Screenshot\.png\)\] {
-  background-image: url(/assets/images/Budbrand-Screenshot.png);
 }
 
 .from-neutral-800 {
@@ -2782,10 +2778,6 @@ video {
   transition-delay: 150ms;
 }
 
-.delay-500 {
-  transition-delay: 500ms;
-}
-
 .delay-75 {
   transition-delay: 75ms;
 }
@@ -3023,25 +3015,9 @@ video {
   .lg\:hidden {
     display: none;
   }
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:bg-left {
-    background-position: left;
-  }
 }
 
 @media (min-width: 1280px) {
-  .xl\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .xl\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
