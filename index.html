@@ -1,972 +1,560 @@
 <!doctype html>
-<html lang="en" class="scroll-p-10 scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./output.css" />
+<html lang="en" class="scroll-p-0 scroll-smooth">
 
-    <link rel="icon" type="image/svg+xml" href="/assets/icons/panda.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ifechukwu Divine — Software Engineer & Full-Stack Developer</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/panda.png" />
+  <link rel="stylesheet" href="./output.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
+  <style>
+    @font-face {
+      font-family: "Aire Pro";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/assets/fonts/SVN-Aire-Pro-Regular.otf) format("opentype");
+    }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PandaGuy</title>
-    <style>
-      @font-face {
-        font-family: "Aire Pro";
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(/assets/fonts/SVN-Aire-Pro-Regular.otf) format("otf");
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: "Aire Pro", Cambria, Cochin, Georgia, Times,
-          "Times New Roman", serif;
-      }
-      .divBlur {
-        backdrop-filter: blur(5px) brightness(0.25);
-      }
-      .toWhite span {
-        background-color: white;
-      }
-      .toWhite g {
-        fill: black;
-      }
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Aire Pro", Georgia, serif;
+    }
+
+    .hide {
+      opacity: 0;
+      filter: blur(6px);
+      transform: translateY(3rem);
+      transition: all 700ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal {
+      opacity: 1;
+      filter: blur(0px);
+      transform: translateY(0rem);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
       .hide {
-        opacity: 0.25;
-        filter: blur(3px);
-        transform: translateY(10rem);
-        transition: all 500ms ease;
-      }
-      .reveal {
         opacity: 1;
-        filter: blur(0px);
-        transform: translateY(0rem);
+        filter: none;
+        transform: none;
+        transition: none;
       }
-    </style>
-  </head>
-  <body>
-    <header
-      class="fixed top-0 z-10 flex w-full justify-between bg-gradient-to-r from-neutral-800 to-black p-5"
-    >
-      <h1 class="flex font-secondary text-3xl text-white">
-        Panda Guy
-        <img
-          class="max-w-12 transition-all delay-100 hover:translate-x-4"
-          src="/assets/icons/panda.png"
-          alt=""
-        />
-      </h1>
-      <nav class="hidden gap-5 text-xl lg:flex">
-        <a
-          href="#hero"
-          class="text-white transition-all delay-100 duration-100 hover:border-b-4 hover:border-lime-600"
-          >Home</a
-        >
-        <a
-          href="#skills"
-          class="text-white transition-all delay-100 duration-100 hover:border-b-4 hover:border-lime-600"
-          >Skills</a
-        >
-        <a
-          href="#about"
-          class="text-white transition-all delay-100 duration-100 hover:border-b-4 hover:border-lime-600"
-          >About</a
-        >
-        <a
-          href="#projects"
-          class="text-white transition-all delay-100 duration-100 hover:border-b-4 hover:border-lime-600"
-          >Works</a
-        >
-        <a
-          href="#contact"
-          class="text-white transition-all delay-100 duration-100 hover:border-b-4 hover:border-lime-600"
-          >Contact</a
-        >
-      </nav>
-      <label for="isOpen" class="lg:hidden">
-        <input type="checkbox" class="peer hidden" id="isOpen" />
-        <img
-          class="relative z-10 max-w-10 peer-checked:hidden"
-          src="./assets/icons/more.svg"
-          alt=""
-        />
-        <img
-          class="relative z-10 hidden max-w-10 peer-checked:block"
-          src="./assets/icons/square.svg"
-          alt=""
-        />
-        <nav
-          class="absolute right-1 top-1 hidden flex-col items-center gap-5 border-2 border-black bg-white p-24 text-xl peer-checked:flex"
-        >
-          <a href="#hero" class=" ">Home</a
-          ><a href="#skills" class=" ">Skills</a>
-          <a href="#about" class=" ">About</a>
+    }
 
-          <a href="#projects" class=" ">Works</a>
-          <a href="#contact" class=" ">Contact</a>
-        </nav>
-      </label>
-    </header>
-    <main>
-      <a
-        id="resume-download"
-        href="/assets/document/Resume.pdf"
-        download=""
-        class="group fixed bottom-10 right-10 z-10 flex items-center rounded-full bg-white p-4 text-sm text-black transition-all duration-500"
-      >
-        <!-- <div class="relative transition-all">
-          <span
-            class="hidden font-display text-lg text-white transition-all group-hover:block group-hover:text-lime-500"
-            >Download Resume</span
-          >
-        </div> -->
-        <svg
-          class="h-14 w-14"
-          version="1.0"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 500.000000 512.000000"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <g
-            class="group-hover:fill-lime-500"
-            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-            fill="#fff"
-            stroke="none"
-          >
-            <path
-              d="M685 5108 c-27 -5 -87 -27 -133 -49 -150 -72 -259 -208 -302 -374
-       -20 -77 -20 -112 -20 -1770 0 -1658 0 -1693 20 -1770 49 -193 183 -336 380
-       -407 l65 -23 735 -3 735 -3 52 -78 c151 -224 399 -421 661 -525 611 -244 1316
-       -46 1712 482 389 519 395 1221 13 1743 -196 270 -515 484 -830 559 l-53 12 0
-       491 c-1 361 -4 499 -13 519 -17 38 -1113 1187 -1144 1199 -32 12 -1811 10
-       -1878 -3z m1735 -588 c6 -413 7 -422 62 -517 56 -99 143 -170 264 -215 55 -20
-       81 -22 412 -26 l352 -4 0 -413 0 -413 -115 -1 c-318 -2 -655 -123 -896 -322
-       l-46 -38 -702 -3 -703 -3 -29 -33 c-57 -64 -29 -153 56 -172 22 -5 293 -10
-       603 -10 309 0 562 -2 562 -5 0 -2 -26 -44 -57 -92 -31 -48 -72 -121 -90 -161
-       l-34 -72 -505 0 -506 0 -29 -29 c-41 -41 -41 -98 0 -143 l29 -33 472 -3 472
-       -3 -5 -22 c-23 -94 -31 -174 -31 -312 1 -201 19 -310 91 -528 5 -17 -27 -17
-       -668 -15 l-674 3 -55 27 c-109 54 -180 151 -200 275 -13 78 -13 3278 0 3356
-       26 160 141 281 292 306 29 5 418 8 863 7 l810 -1 5 -385z m621 -205 l313 -330
-       -257 -3 c-244 -2 -260 -1 -307 19 -27 12 -67 41 -89 64 -65 70 -71 107 -71
-       414 l0 266 49 -50 c27 -28 190 -198 362 -380z m530 -1606 c294 -38 550 -167
-       754 -380 457 -478 461 -1230 9 -1719 -56 -60 -177 -159 -259 -212 -304 -194
-       -735 -237 -1087 -107 -373 137 -661 447 -772 830 -38 134 -49 234 -43 398 12
-       317 124 582 342 810 275 289 669 430 1056 380z"
-            />
-            <path
-              d="M1021 3069 c-55 -55 -37 -142 36 -170 14 -5 258 -9 579 -9 611 0 597
-       -1 630 61 22 43 11 91 -27 123 l-31 26 -578 0 -578 0 -31 -31z"
-            />
-            <path
-              d="M3395 2281 c-27 -8 -47 -22 -65 -45 -13 -16 -16 -106 -20 -614 l-5
-       -596 -214 230 c-118 126 -226 237 -240 246 -66 45 -161 -3 -161 -80 1 -20 6
-       -47 13 -58 7 -12 157 -177 335 -367 281 -302 327 -347 358 -353 23 -4 46 -2
-       65 7 33 16 653 679 676 723 45 87 -57 179 -145 131 -15 -8 -124 -119 -242
-       -248 l-215 -233 -5 596 c-4 497 -7 599 -20 617 -23 35 -78 56 -115 44z"
-            />
-          </g>
-        </svg>
-        <!-- <svg
-          class="top-12 max-w-10 fill-white group-hover:fill-lime-500"
-          version="1.0"
-          xmlns="http://www.w3.org/2000/svg"
-          width="512.000000pt"
-          viewBox="0 0 512.000000 512.000000"
-          preserveAspectRatio="xMidYMid meet"
-        >
-          <g
-            class="fill-white transition-all duration-500 group-hover:fill-lime-500"
-            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-            fill="#000000"
-            stroke="none"
-          >
-            <path
-              d="M2510 4389 c-32 -13 -87 -66 -108 -104 -15 -27 -17 -122 -22 -1038
-       l-5 -1007 -345 346 c-226 227 -359 353 -385 365 -72 33 -163 17 -224 -41 -33
-       -32 -61 -98 -61 -145 0 -87 13 -102 563 -653 287 -288 540 -534 562 -547 56
-       -32 102 -38 160 -20 46 13 89 54 601 567 536 537 552 554 563 604 30 128 -68
-       254 -198 254 -80 0 -92 -9 -463 -379 l-358 -355 0 1002 c0 1086 2 1041 -53
-       1100 -51 55 -157 79 -227 51z"
-            />
-            <path
-              d="M870 1724 c-46 -20 -77 -50 -103 -99 -19 -36 -22 -60 -25 -242 -7
-       -333 17 -459 110 -599 78 -117 202 -208 343 -251 57 -17 131 -18 1390 -18
-       l1330 0 75 23 c105 33 196 89 271 169 77 82 122 164 149 269 17 67 20 111 20
-       344 0 260 -1 268 -23 311 -66 125 -235 145 -331 39 -19 -21 -39 -56 -45 -77
-       -6 -22 -11 -139 -11 -273 0 -206 -3 -240 -19 -275 -23 -51 -79 -101 -128 -114
-       -56 -16 -2528 -15 -2574 0 -51 18 -97 55 -122 102 -21 40 -22 57 -27 307 -5
-       284 -8 296 -62 347 -54 51 -149 67 -218 37z"
-            />
-          </g>
-        </svg> -->
-      </a>
+    a:focus-visible,
+    label:focus-within,
+    button:focus-visible {
+      outline: 2px solid #84cc16;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+      border-left: 2px solid rgba(132, 204, 22, 0.3);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 0.35rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      background: #84cc16;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 1);
+    }
+
+    .timeline-item:last-child {
+      border-left-color: transparent;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0a0a0a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #262626;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #84cc16;
+    }
+  </style>
+</head>
+
+<body class="bg-neutral-950 text-white font-primary antialiased selection:bg-lime-500 selection:text-black">
+
+  <!-- HEADER -->
+  <header
+    class="fixed top-0 z-40 flex w-full items-center justify-between bg-neutral-950/80 px-6 py-4 backdrop-blur-md border-b border-white/5 md:px-12">
+    <a href="#hero" class="flex items-center gap-3 font-display text-2xl text-white group">
+      <span>Panda Guy</span>
+      <img class="w-8 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+        src="/assets/icons/panda.png" alt="Panda Guy logo" />
+    </a>
+
+    <nav class="hidden gap-8 text-base font-medium lg:flex">
+      <a href="#hero" class="text-neutral-300 transition-colors hover:text-lime-400">Home</a>
+      <a href="#about" class="text-neutral-300 transition-colors hover:text-lime-400">About</a>
+      <a href="#skills" class="text-neutral-300 transition-colors hover:text-lime-400">Skills</a>
+      <a href="#experience" class="text-neutral-300 transition-colors hover:text-lime-400">Experience</a>
+      <a href="#projects" class="text-neutral-300 transition-colors hover:text-lime-400">Works</a>
+      <a href="#contact" class="text-neutral-300 transition-colors hover:text-lime-400">Contact</a>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <label for="isOpen" class="lg:hidden">
+      <input type="checkbox" class="peer hidden" id="isOpen" />
+      <img class="relative z-50 w-8 cursor-pointer peer-checked:hidden" src="./assets/icons/more.svg" alt="Open menu" />
+      <img class="relative z-50 hidden w-8 cursor-pointer peer-checked:block" src="./assets/icons/square.svg"
+        alt="Close menu" />
+
       <div
-        class="mt-16 h-[calc(100dvh-4rem)] bg-[url('/assets/images/SBA_1294_2.jpg')] bg-cover bg-fixed bg-center bg-no-repeat backdrop-blur-2xl"
-      >
-        <section
-          id="hero"
-          class="flex h-full items-end justify-center p-10 backdrop-brightness-[.4] md:items-center"
-        >
-          <!-- <div><img src="./assets/images/SBA_1294.jpg" alt="" /></div> -->
-          <div class="max-w-lg">
-            <h2 class="hide text-center font-display text-5xl text-lime-500">
-              Hi, I'm
-            </h2>
-            <h2 class="hide text-center font-display text-5xl text-white">
-              Igwedinma Ifechukwu Divine
-            </h2>
-            <h2 class="hide text-center font-display text-5xl text-lime-500">
-              Frontend Web Developer
-            </h2>
-            <p class="hide mt-5 text-center font-primary text-xl text-white">
-              Crafting intuitive and visually stunning web experiences. Turning
-              ideas into reality with code. Let's create something amazing
-              together!
+        class="fixed inset-0 z-40 hidden bg-black/80 backdrop-blur-sm transition-opacity duration-300 peer-checked:block">
+      </div>
+
+      <nav
+        class="fixed right-0 top-0 z-40 flex h-dvh w-72 translate-x-full flex-col justify-center gap-8 bg-neutral-900 p-10 text-2xl text-white shadow-2xl transition-transform duration-300 peer-checked:translate-x-0">
+        <a href="#hero" class="hover:text-lime-400">Home</a>
+        <a href="#about" class="hover:text-lime-400">About</a>
+        <a href="#skills" class="hover:text-lime-400">Skills</a>
+        <a href="#experience" class="hover:text-lime-400">Experience</a>
+        <a href="#projects" class="hover:text-lime-400">Works</a>
+        <a href="#contact" class="hover:text-lime-400">Contact</a>
+      </nav>
+    </label>
+  </header>
+
+  <!-- FLOATING RESUME BUTTON -->
+  <a id="resume-download" href="/assets/document/Resume.pdf" download=""
+    class="group fixed bottom-8 right-8 z-30 flex items-center justify-center rounded-full bg-lime-500 p-4 text-black shadow-xl transition-all duration-300 hover:scale-110 hover:bg-lime-400 focus:ring-4 focus:ring-lime-500/50"
+    aria-label="Download resume">
+    <svg class="h-7 w-7 transition-transform duration-300 group-hover:translate-y-0.5" fill="currentColor"
+      viewBox="0 0 24 24">
+      <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm9 2H3v2h18v-2z" />
+    </svg>
+  </a>
+
+  <main class="w-full">
+    <!-- 1. HERO SECTION -->
+    <section id="hero"
+      class="relative flex min-h-screen w-full items-center justify-center bg-[url('/assets/images/SBA_1294_2.jpg')] bg-cover bg-fixed bg-center bg-no-repeat px-6 pt-20">
+      <div class="absolute inset-0 bg-neutral-950/80 backdrop-blur-sm"></div>
+
+      <div class="relative z-10 mx-auto max-w-4xl text-center">
+       
+        <h1 class="hide mt-6 text-4xl text-white sm:text-6xl md:text-7xl font-bold tracking-tight">
+          Igwedinma Ifechukwu Divine
+        </h1>
+        <h2 class="hide mt-4 font-display text-2xl text-lime-400 sm:text-3xl md:text-4xl">
+          Software Engineer & Full-Stack Developer
+        </h2>
+        <p class="hide mx-auto mt-6 max-w-2xl text-lg text-neutral-300 sm:text-xl font-light leading-relaxed">
+          I craft responsive, resilient web applications end-to-end using React, Next.js, Java Spring Boot, NestJS, and
+          PostgreSQL.
+        </p>
+
+        <div class="hide mt-10 flex flex-wrap justify-center gap-4">
+          <a href="#projects"
+            class="rounded-lg bg-lime-500 px-8 py-3.5 text-base font-semibold text-black transition-all hover:bg-lime-400 hover:shadow-lg hover:shadow-lime-500/20">
+            Explore Projects
+          </a>
+          <a href="#contact"
+            class="rounded-lg border border-white/20 bg-white/5 px-8 py-3.5 text-base font-semibold text-white transition-all hover:border-lime-500/50 hover:bg-white/10">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+
+      <a href="#about"
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-neutral-400 transition-colors hover:text-lime-400">
+        <svg class="h-6 w-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </a>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" class="flex min-h-screen w-full items-center justify-center bg-neutral-950 px-6 py-24 md:px-12">
+      <div class="mx-auto max-w-5xl">
+        <div class="grid items-center gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <span class="hide text-sm font-mono uppercase tracking-widest text-lime-400">Background</span>
+            <h2 class="hide mt-2 text-4xl font-bold text-white sm:text-5xl">About Me</h2>
+            <div class="hide mt-4 h-1 w-20 bg-lime-500"></div>
+
+            <div class="hide mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+              <p class="text-sm text-neutral-400">Education</p>
+              <p class="mt-1 text-lg font-semibold text-white">B.Sc. Software Engineering</p>
+              <p class="text-lime-400">First Class Honors</p>
+              <p class="mt-2 text-xs text-neutral-400">Babcock University, Ogun State, Nigeria</p>
+            </div>
+          </div>
+
+          <div class="space-y-6 text-lg leading-relaxed text-neutral-300 lg:col-span-7">
+            <p class="hide">
+              I am a Full-Stack Software Engineer with a passion for designing scalable distributed architectures and
+              intuitive user experiences.
+            </p>
+            <p class="hide">
+              My professional experience covers building modern web interfaces with React and Next.js alongside
+              resilient RESTful services powered by Java Spring Boot and PHP. I thrive in agile engineering teams,
+              translating business goals into robust, maintainable codebase structures.
+            </p>
+            <p class="hide">
+              For my undergraduate capstone, I conceptualized and deployed a local Automated License Plate Recognition
+              (ALPR) Traffic Regulation System to streamline vehicle violation processing and payment handling.
             </p>
           </div>
-        </section>
+        </div>
       </div>
-      <section
-        id="skills"
-        class="target grid justify-center bg-gradient-to-tl from-zinc-800 to-neutral-950 p-10 text-center md:text-justify"
-      >
-        <h2 class="hide font-display text-3xl text-white">Skills</h2>
-        <h2 class="hide font-display text-3xl text-lime-500">
-          What I can do ?
-        </h2>
+    </section>
 
-        <ul>
-          <li
-            class="hide my-4 max-w-4xl list-none font-primary text-lg text-white"
-          >
-            <em class="font-semibold not-italic text-lime-500"
-              >Transform Designs into Websites:</em
-            >
-            Convert beautiful designs into fully functional, responsive
-            websites.
-          </li>
-          <li
-            class="hide my-4 max-w-4xl list-none font-primary text-lg text-white"
-          >
-            <em class="font-semibold not-italic text-lime-500"
-              >Build Web App Templates:</em
-            >
-            Develop reusable and scalable templates for web applications.
-          </li>
-          <li
-            class="hide my-4 max-w-4xl list-none font-primary text-lg text-white"
-          >
-            <em class="font-semibold not-italic text-lime-500"
-              >Bring Businesses Online:</em
-            >
-            Create professional websites that enhance online presence and drive
-            business growth.
-          </li>
-          <li
-            class="hide my-4 max-w-4xl list-none font-primary text-lg text-white"
-          >
-            <em class="font-semibold not-italic text-lime-500"
-              >Custom Website Development:</em
-            >
-            Design and build personalized websites tailored to individual needs.
-          </li>
-        </ul>
-
-        <h2 class="hide font-display text-3xl text-lime-500">My Expertise</h2>
-        <ul>
-          <li class="hide my-4 max-w-4xl font-primary text-lg text-white">
-            Frontend Development: Proficient in
-            <em class="font-semibold not-italic text-lime-500"
-              >HTML, CSS, JavaScript, React, and Tailwind
-            </em>
-            , I bring creativity and functionality together to deliver
-            exceptional web solutions.
-          </li>
-          <li class="hide my-4 max-w-4xl font-primary text-lg text-white">
-            Past Projects: I've worked with various technologies including
-            <em class="font-semibold not-italic text-lime-500"
-              >Unity for game development with C# for scripting, Django
-              templating language for backend integration, as well as C++, C,
-              Java, and Python
-            </em>
-            for diverse programming tasks.
-          </li>
-          <li class="hide my-4 max-w-4xl font-primary text-lg text-white">
-            Learning Next: I am always eager to expand my skill set. Currently,
-            I am looking forward to mastering
-            <em class="font-semibold not-italic text-lime-500">
-              PHP, Laravel, Next.js, and Firebase</em
-            >
-            to enhance my development capabilities.
-          </li>
-        </ul>
-        <!-- </p> -->
-      </section>
-      <section
-        id="about"
-        class="blacked grid justify-center bg-black p-10 text-center md:text-justify"
-      >
-        <h2 class="hide font-display text-3xl text-white">About</h2>
-        <h2 class="hide font-display text-3xl text-lime-500">
-          Little yap about my self
-        </h2>
-        <div class="">
-          <p
-            class="hide my-4 max-w-4xl font-primary text-lg text-white delay-75"
-          >
-            Hello! I'm Igwedinma Ifechukwu Divine a passionate Frontend Web
-            Developer with a deep love for programming. I thrive on transforming
-            complex problems into elegant, user-friendly solutions through code.
-          </p>
-          <p
-            class="hide my-4 max-w-4xl font-primary text-lg text-white delay-100"
-          >
-            Beyond work, I'm an avid chess player, always eager for strategic
-            challenges. Drawing lets me express my creativity, while fitness
-            activities like going to the gym, football (soccer), and basketball
-            keep me active.
-          </p>
-          <p
-            class="hide my-4 max-w-4xl font-primary text-lg text-white delay-150"
-          >
-            As a person, I'm reserved yet open-minded. I value deep
-            conversations and enjoy different perspectives. My focus and
-            adaptability help me continuously learn and grow as a developer.
-            Thank you for visiting my portfolio! If you're interested in working
-            together or connecting, feel free to reach out. Let's create
-            something amazing together!
+    <!-- 3. SKILLS SECTION -->
+    <section id="skills"
+      class="flex min-h-screen w-full items-center justify-center bg-neutral-900/50 px-6 py-24 md:px-12">
+      <div class="mx-auto w-full max-w-6xl">
+        <div class="text-center">
+          <span class="hide text-sm font-mono uppercase tracking-widest text-lime-400">Capabilities</span>
+          <h2 class="hide mt-2 text-4xl font-bold text-white sm:text-5xl">Technical Stack</h2>
+          <p class="hide mx-auto mt-4 max-w-xl text-neutral-400">
+            Toolings, frameworks, and databases I leverage to build production-ready applications.
           </p>
         </div>
-      </section>
-      <section id="projects" class="grid justify-center p-10">
-        <div class="w-[90vw] max-w-4xl">
-          <h2 class="font-display text-3xl">Works</h2>
-          <h2 class="font-display text-3xl text-lime-700">
-            Projects I worked on
-          </h2>
+
+        <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div
-            class="my-6 grid grid-cols-1 justify-center gap-10 xl:grid-cols-2 2xl:grid-cols-3"
-          >
-            <div
-              class="hide group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/FindIt-Screenshot.png)] bg-cover bg-left transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">FindIt</h2>
-                  <p class="my-4 font-primary">
-                    FindIt, lost and found system, connects owners to their lost
-                    items as seamlessly and easily as possible
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://shadowdevs-findit.azurewebsites.net/login/?next=/view-items/"
-                      target="_blank"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
+            class="hide group rounded-2xl border border-white/10 bg-neutral-900 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-lime-500/50 hover:shadow-2xl hover:shadow-lime-500/5">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-lime-500/10 text-lime-400">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-2xl font-bold text-white">Frontend</h3>
+            <ul class="mt-4 space-y-2 text-neutral-400">
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>React &
+                React Native</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>Next.js &
+                TypeScript</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>Tailwind CSS
+                & Material UI</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>HTML5 / CSS3
+                / JavaScript</li>
+            </ul>
+          </div>
 
-                    <!-- <a
-                      href=""
-                      disabled
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a> -->
-                  </div>
-                </div>
+          <div
+            class="hide group rounded-2xl border border-white/10 bg-neutral-900 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-lime-500/50 hover:shadow-2xl hover:shadow-lime-500/5">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-lime-500/10 text-lime-400">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-2xl font-bold text-white">Backend</h3>
+            <ul class="mt-4 space-y-2 text-neutral-400">
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>Java &
+                Spring Boot</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>Spring
+                Security & JWT</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>Node.js,
+                NestJS & PHP</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>RESTful API
+                Architecture</li>
+            </ul>
+          </div>
+
+          <div
+            class="hide group rounded-2xl border border-white/10 bg-neutral-900 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-lime-500/50 hover:shadow-2xl hover:shadow-lime-500/5 sm:col-span-2 lg:col-span-1">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-lime-500/10 text-lime-400">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-2xl font-bold text-white">Data & Cloud</h3>
+            <ul class="mt-4 space-y-2 text-neutral-400">
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>PostgreSQL &
+                MySQL</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>Prisma, JPA
+                & Hibernate</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>Azure &
+                Vercel Deployment</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-lime-400"></span>Git & CI/CD
+                Pipelines</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. EXPERIENCE SECTION -->
+    <section id="experience"
+      class="flex min-h-screen w-full items-center justify-center bg-neutral-950 px-6 py-24 md:px-12">
+      <div class="mx-auto w-full max-w-4xl">
+        <div class="text-center">
+          <span class="hide text-sm font-mono uppercase tracking-widest text-lime-400">Career History</span>
+          <h2 class="hide mt-2 text-4xl font-bold text-white sm:text-5xl">Work Experience</h2>
+        </div>
+
+        <div class="mt-16 space-y-12">
+          <div class="hide timeline-item">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="text-2xl font-bold text-white">Software Engineer</h3>
+              <span class="text-sm font-mono text-lime-400">Sep 2024 – Present</span>
+            </div>
+            <p class="mt-1 text-lg font-medium text-neutral-400">Stalwart Crest Ltd</p>
+            <p class="mt-4 text-neutral-300 leading-relaxed">
+              Developing responsive frontends connected to secure Java Spring Boot services. Managing full software
+              lifecycles for real-time application features and maintaining deployment workflows.
+            </p>
+          </div>
+
+          <div class="hide timeline-item">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="text-2xl font-bold text-white">Software Engineer</h3>
+              <span class="text-sm font-mono text-lime-400">Apr 2025 – Jul 2025</span>
+            </div>
+            <p class="mt-1 text-lg font-medium text-neutral-400">Kovu</p>
+            <p class="mt-4 text-neutral-300 leading-relaxed">
+              Shipped full-stack web capabilities tailored to financial tech services. Collaborated across product teams
+              using React and Spring Boot to streamline user transactions and modern backend modules.
+            </p>
+          </div>
+
+          <div class="hide timeline-item">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="text-2xl font-bold text-white">Frontend Developer</h3>
+              <span class="text-sm font-mono text-lime-400">Jan 2025 – Jun 2025</span>
+            </div>
+            <p class="mt-1 text-lg font-medium text-neutral-400">CSDC Inc.</p>
+            <p class="mt-4 text-neutral-300 leading-relaxed">
+              Turned Figma wireframes into functional, accessible React user interfaces with Material UI. Integrated
+              REST services and enhanced multi-module application responsiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROJECTS SECTION -->
+    <section id="projects"
+      class="flex min-h-screen w-full items-center justify-center bg-neutral-900/50 px-6 py-24 md:px-12">
+      <div class="mx-auto w-full max-w-6xl">
+        <div class="text-center">
+          <span class="hide text-sm font-mono uppercase tracking-widest text-lime-400">Portfolio</span>
+          <h2 class="hide mt-2 text-4xl font-bold text-white sm:text-5xl">Featured Works</h2>
+          <p class="hide mx-auto mt-4 max-w-xl text-neutral-400">
+            Selected client and capstone projects showcasing full-stack integration.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div
+            class="hide group relative flex h-[420px] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 p-6 transition-all duration-500 hover:border-lime-500/50">
+            <div
+              class="absolute inset-0 bg-[url('/assets/images/traffic_enforcement_app.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+
+            <div class="relative z-10">
+              <span class="text-xs font-mono text-lime-400">Spring Boot · React Native · ALPR</span>
+              <h3 class="mt-2 text-2xl font-bold text-white">Traffic Regulation System</h3>
+              <p class="mt-2 text-sm text-neutral-300 line-clamp-3">
+                Vehicle enforcement platform featuring automated license plate scanning, fine payments via Paystack, and
+                administrative violation handling.
+              </p>
+              <div class="mt-6">
+                <a href="https://shadowdevs-findit.azurewebsites.net/login/?next=/view-items/" target="_blank"
+                  rel="noopener"
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-lime-400 hover:text-lime-300">
+                  Request Demo <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
               </div>
             </div>
-            <div
-              class="hide group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/Budbrand-Screenshot.png)] bg-cover bg-left transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">
-                    BudBrand's Website
-                  </h2>
-                  <p class="my-4 font-primary">
-                    In this gig, I was responsible for building a complete
-                    website for a business.
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://budbrand.netlify.app"
-                      target="_blank"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
+          </div>
 
-                    <!-- <a
-                      href=""
-                      disabled
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a> -->
-                  </div>
-                </div>
+          <div
+            class="hide group relative flex h-[420px] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 p-6 transition-all duration-500 hover:border-lime-500/50">
+            <div
+              class="absolute inset-0 bg-[url('/assets/images/yardcode.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+
+            <div class="relative z-10">
+              <span class="text-xs font-mono text-lime-400">Next.js · React · APIs</span>
+              <h3 class="mt-2 text-2xl font-bold text-white">YardCode</h3>
+              <p class="mt-2 text-sm text-neutral-300 line-clamp-3">
+                Web application platform where I engineered interactive front-end components and modular REST endpoints
+                during early development phases.
+              </p>
+              <div class="mt-6">
+                <a href="https://www.yardcode.ng" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-lime-400 hover:text-lime-300">
+                  Visit Platform <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
               </div>
             </div>
-            <div
-              class="group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/easyBank-Screenshot.png)] bg-cover bg-center transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">
-                    Easy Bank Landing Page
-                  </h2>
-                  <p class="my-4 font-primary">
-                    This is my solution to the Frontend mentor challenge Easy
-                    Bank Landing Page
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://thisiseasybank.netlify.app/"
-                      target="_blank"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
+          </div>
 
-                    <a
-                      href="https://github.com/I-Divine/EasyBank-Landing-page"
-                      target="_blank"
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a>
-                  </div>
-                </div>
-              </div>
+          <div
+            class="hide group relative flex h-[420px] flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-neutral-900 p-6 transition-all duration-500 hover:border-lime-500/50 md:col-span-2 lg:col-span-1">
+            <div
+              class="absolute inset-0 bg-[url('/assets/images/phf_website.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110">
             </div>
-            <div
-              class="hide group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/getlinked-Screenshot.png)] bg-cover bg-right transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">Getlinked</h2>
-                  <p class="my-4 font-primary">
-                    This is my solution to a design challenge hackathon, I found
-                    on twitter
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://getlinked-website.netlify.app/"
-                      target="_blank"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
 
-                    <a
-                      href="https://github.com/I-Divine/GetLinked-website-new"
-                      target="_blank"
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="hide group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/quizApp-Screenshot.png)] bg-cover bg-left transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">Quiz App</h2>
-                  <p class="my-4 font-primary">
-                    This is a quiz application that display question, collects
-                    the users answers and display his/her score.
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://divines-quiz.netlify.app/"
-                      target="_blank"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
-
-                    <a
-                      href="https://github.com/I-Divine/Quiz-App"
-                      target="_blank"
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="hide group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/SojiPortfolio-Screenshot.png)] bg-cover bg-right transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">
-                    Redesigned Soji's Portfolio
-                  </h2>
-                  <p class="my-4 font-primary">
-                    My friend Soji needed a new portfolio, so I helped him
-                    implement his new design for the portfolio website.
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://sojijr.github.io/portfolio-redesign/"
-                      target="_blank"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
-
-                    <a
-                      href="https://github.com/sojijr/portfolio-redesign"
-                      target="_blank"
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="hide group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/JerryPortfolio-Screenshot.png)] bg-cover bg-left transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">
-                    Jerry's Portfolio
-                  </h2>
-                  <p class="my-4 font-primary">
-                    Jerry needed a portfolio website quick for an application,
-                    luckily I came to the rescue. Built this in 24hrs without a
-                    design lol.
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://jerry-dev.netlify.app/"
-                      target="_blank"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
-
-                    <a
-                      href="https://github.com/I-Divine/jerry-s-portfolio"
-                      target="_blank"
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="hide group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/flappy-bird-Screenshot.png)] bg-cover bg-left transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">
-                    Flappy Bird
-                  </h2>
-                  <p class="my-4 font-primary">
-                    It's just flappy bird, lol, built it myself and I'm proud of
-                    it, I learnt a lot. The physics classes actually came in
-                    handy. Not mobile friendly though.
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://divines-flappy-bird.netlify.app/"
-                      target="_blank"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
-
-                    <a
-                      href="https://github.com/I-Divine/flappy_bird"
-                      target="_blank"
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="hide group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/StatNerd-Screenshot.png)] bg-cover bg-center transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">
-                    Stat-Nerd App
-                  </h2>
-                  <p class="my-4 font-primary">
-                    I built this because STAT 101 assignment was a bit
-                    challenging all the time. It's not much but if you struggle
-                    in statistics class you might find this helpful
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://stat-nerd.netlify.app/"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
-
-                    <a
-                      href="https://github.com/I-Divine/Stat_Nerd"
-                      target="_blank"
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="hide group h-96 overflow-hidden rounded-2xl bg-[url(/assets/images/calculator-Screenshot.png)] bg-cover bg-center transition-all delay-100 duration-500 hover:scale-110"
-            >
-              <div
-                class="grid h-full w-full translate-y-full items-center justify-center rounded-sm bg-black p-5 text-center text-white transition-all delay-100 duration-500 group-hover:translate-y-0"
-              >
-                <div class="max-w-80">
-                  <h2 class="font-display text-3xl text-lime-500">
-                    Calculator App
-                  </h2>
-                  <p class="my-4 font-primary">
-                    This probably the prettiest calculator app you've ever seen.
-                    This my solution to a frontend mentor project. Try changing
-                    the themes :)
-                  </p>
-                  <div class="flex justify-center gap-4">
-                    <a
-                      href="https://pretty-calculator-app.netlify.app/"
-                      target="_blank"
-                      class="w-max bg-lime-500 p-2 text-black transition-all duration-300 hover:scale-110"
-                    >
-                      View Live Site
-                    </a>
-
-                    <a
-                      href="https://github.com/I-Divine/calculator-app-main"
-                      class="w-max border-2 border-lime-500 bg-black p-2 text-lime-500 transition-all duration-300 hover:scale-110"
-                    >
-                      View Repo
-                    </a>
-                  </div>
-                </div>
+            <div class="relative z-10">
+              <span class="text-xs font-mono text-lime-400">React · Tailwind · Paystack</span>
+              <h3 class="mt-2 text-2xl font-bold text-white">Peace Hope Foundation</h3>
+              <p class="mt-2 text-sm text-neutral-300 line-clamp-3">
+                Non-profit organization platform tailored with online donation gateways, project showcases, and
+                communication forms.
+              </p>
+              <div class="mt-6">
+                <a href="https://peace-hope-foundation.netlify.app/" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-lime-400 hover:text-lime-300">
+                  View Live Site <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section
-        id="contact"
-        class="bg-gradient-to-tl from-zinc-800 to-neutral-950 p-10 font-primary"
-      >
-        <h2 class="hide font-display text-3xl text-white">Contact</h2>
-        <h2 class="hide font-display text-3xl text-lime-500">
-          Let's Work Together
-        </h2>
-        <div class="my-10 flex flex-wrap gap-4">
-          <a
-            href="https://github.com/I-Divine"
-            class="hide flex w-fit items-end gap-10 rounded bg-black p-4 text-white transition-all delay-100 duration-100 hover:scale-105 md:gap-20 md:text-xl"
-            ><svg
-              class="w-14"
-              version="1.0"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512.000000 512.000000"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <g
-                class="fill-lime-500"
-                transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                fill="#000000"
-                stroke="none"
-              >
-                <path
-                  d="M790 5105 c-195 -36 -349 -116 -497 -258 -111 -107 -194 -236 -242
-           -374 -52 -155 -51 -105 -51 -1913 0 -1808 -1 -1758 51 -1913 93 -271 325 -503
-           596 -596 136 -46 206 -51 696 -51 438 0 463 1 501 20 82 40 88 68 80 422 l-7
-           288 -41 -8 c-23 -4 -122 -7 -221 -7 -255 1 -356 31 -476 143 -65 60 -71 70
-           -135 210 -74 163 -173 290 -261 335 -39 21 -103 94 -103 119 0 39 117 51 206
-           21 123 -42 221 -123 308 -256 112 -169 238 -256 385 -265 89 -5 195 10 285 39
-           l65 21 16 75 c19 85 71 193 117 239 l30 32 -29 5 c-15 3 -50 8 -78 12 -297 36
-           -587 164 -751 330 -100 102 -168 215 -224 380 -60 170 -74 268 -74 510 0 212
-           1 223 27 310 46 150 120 287 198 370 l28 30 -19 64 c-30 95 -41 221 -30 326 6
-           49 12 97 15 105 2 8 15 54 29 102 26 85 27 87 62 94 98 18 384 -87 601 -223
-           l72 -45 93 21 c218 47 339 61 548 61 209 0 330 -14 548 -61 l93 -21 72 44
-           c241 148 483 240 588 224 l46 -7 27 -87 c40 -134 48 -195 43 -337 -3 -95 -10
-           -147 -25 -195 l-21 -65 28 -30 c79 -84 153 -223 197 -370 22 -75 27 -116 31
-           -246 14 -407 -96 -752 -304 -955 -167 -163 -404 -272 -693 -319 -52 -8 -110
-           -18 -128 -21 l-33 -5 34 -39 c49 -58 85 -128 109 -217 20 -73 22 -108 27 -583
-           7 -579 2 -548 93 -575 43 -12 125 -15 499 -15 475 0 547 5 682 51 270 93 503
-           326 596 596 52 155 51 105 51 1913 0 1808 1 1758 -51 1913 -93 271 -325 503
-           -596 596 -155 52 -103 51 -1922 50 -1371 -1 -1700 -3 -1761 -14z"
-                />
-                <path
-                  d="M909 1479 c-11 -7 -10 -12 8 -30 24 -24 57 -19 51 7 -4 21 -40 35
-           -59 23z"
-                />
-                <path
-                  d="M1011 1386 c-16 -19 28 -72 52 -63 22 8 22 40 -1 60 -23 21 -36 21
-           -51 3z"
-                />
-                <path
-                  d="M1111 1256 c-10 -11 -9 -21 3 -44 19 -37 41 -46 61 -26 20 20 19 26
-           -6 58 -23 29 -41 33 -58 12z"
-                />
-                <path
-                  d="M1239 1111 c-22 -18 -22 -19 -6 -45 18 -26 58 -43 76 -31 17 10 13
-           50 -6 67 -32 27 -41 28 -64 9z"
-                />
-                <path
-                  d="M1407 1003 c-4 -3 -7 -16 -7 -29 0 -17 9 -25 35 -34 20 -7 42 -9 50
-           -6 22 8 18 53 -4 66 -22 11 -64 13 -74 3z"
-                />
-                <path
-                  d="M1812 988 c-35 -35 5 -75 56 -57 35 12 48 35 31 55 -14 17 -71 18
-           -87 2z"
-                />
-                <path
-                  d="M1628 973 c-20 -5 -30 -27 -22 -48 14 -37 104 -25 104 13 0 35 -31
-           49 -82 35z"
-                />
-              </g>
-            </svg>
-            Checkout my github
-          </a>
-          <a
-            href="https://www.linkedin.com/in/divine-i/"
-            class="hide flex w-fit items-end gap-10 rounded bg-black p-4 text-white transition-all delay-100 duration-100 hover:scale-105 md:text-xl"
-          >
-            <svg
-              class="w-14"
-              version="1.0"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512.000000 512.000000"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <g
-                class="fill-lime-500"
-                transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                fill="#000000"
-                stroke="none"
-              >
-                <path
-                  d="M610 5104 c-247 -53 -460 -231 -554 -463 -59 -145 -56 -41 -56 -2081
-           0 -1629 2 -1880 15 -1944 56 -272 246 -484 519 -579 l91 -32 1935 0 1935 0 95
-           33 c239 83 408 253 493 496 l32 91 0 1925 c0 2047 2 1954 -47 2080 -74 189
-           -239 359 -419 431 -145 58 17 53 -2064 56 -1616 1 -1920 -1 -1975 -13z m3842
-           -295 c171 -37 321 -187 357 -357 16 -76 16 -3709 0 -3784 -37 -171 -187 -321
-           -357 -357 -76 -16 -3709 -16 -3784 0 -170 36 -321 187 -357 357 -16 75 -16
-           3709 0 3784 35 165 178 313 344 354 69 17 3717 20 3797 3z"
-                />
-                <path
-                  d="M1105 4496 c-84 -21 -147 -57 -211 -121 -177 -176 -177 -453 1 -630
-           258 -259 695 -118 757 244 24 141 -22 281 -127 387 -112 113 -269 158 -420
-           120z m175 -306 c45 -23 80 -80 80 -130 0 -76 -74 -150 -151 -150 -46 0 -108
-           39 -130 82 -37 72 -14 151 57 194 48 29 92 30 144 4z"
-                />
-                <path
-                  d="M838 3289 c-23 -12 -46 -35 -58 -59 -20 -39 -20 -57 -20 -1270 0
-           -1214 0 -1231 20 -1270 13 -26 34 -47 60 -60 37 -19 58 -20 370 -20 312 0 333
-           1 370 20 26 13 47 34 60 60 20 39 20 56 20 1270 0 1214 0 1231 -20 1270 -13
-           26 -34 47 -60 60 -37 19 -58 20 -372 20 -312 -1 -335 -2 -370 -21z m522 -1329
-           l0 -1050 -150 0 -150 0 0 1050 0 1050 150 0 150 0 0 -1050z"
-                />
-                <path
-                  d="M2038 3289 c-23 -12 -46 -35 -58 -59 -20 -39 -20 -57 -20 -1270 0
-           -1214 0 -1231 20 -1270 13 -26 34 -47 60 -60 37 -19 58 -20 370 -20 312 0 333
-           1 370 20 79 40 74 -5 80 820 5 721 5 736 26 781 31 66 78 114 142 146 47 23
-           70 28 132 28 124 -1 214 -56 267 -163 l28 -57 5 -735 c6 -825 1 -780 80 -820
-           37 -19 58 -20 370 -20 312 0 333 1 370 20 26 13 47 34 60 60 20 40 21 50 18
-           938 -3 883 -4 898 -25 973 -97 343 -342 588 -678 679 -113 31 -346 39 -468 16
-           -94 -18 -203 -54 -278 -92 l-46 -23 -21 44 c-15 31 -33 50 -61 65 -38 19 -58
-           20 -373 20 -312 -1 -335 -2 -370 -21z m522 -369 c0 -112 20 -159 80 -190 80
-           -41 126 -24 245 89 138 131 294 191 499 191 204 0 356 -59 486 -189 60 -59 86
-           -95 119 -161 72 -147 71 -132 71 -987 l0 -763 -150 0 -150 0 0 633 c0 598 -1
-           638 -20 711 -29 113 -73 190 -160 276 -86 87 -163 131 -276 160 -98 25 -190
-           25 -288 0 -113 -29 -190 -73 -276 -160 -87 -86 -131 -163 -160 -276 -19 -73
-           -20 -113 -20 -711 l0 -633 -150 0 -150 0 0 1050 0 1050 150 0 150 0 0 -90z"
-                />
-              </g>
-            </svg>
+      </div>
+    </section>
 
-            Connect on Linkedin
+    <!-- 6. CONTACT SECTION -->
+    <section id="contact"
+      class="relative flex min-h-screen w-full flex-col justify-between bg-neutral-950 px-6 pt-24 pb-12 md:px-12">
+      <div class="mx-auto my-auto w-full max-w-4xl text-center">
+        <span class="hide text-sm font-mono uppercase tracking-widest text-lime-400">Connect</span>
+        <h2 class="hide mt-2 text-4xl font-bold text-white sm:text-6xl">Let's Work Together</h2>
+        <p class="hide mx-auto mt-6 max-w-lg text-lg text-neutral-400">
+          I am open to engineering roles, collaborations, and contract opportunities. Feel free to reach out directly.
+        </p>
+
+        <div class="hide mt-12 flex flex-wrap justify-center gap-4">
+          <a href="mailto:igwedinmaifechukwu@gmail.com"
+            class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-6 py-4 text-white transition-all hover:border-lime-500/50 hover:bg-white/10">
+            <svg class="h-6 w-6 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>Send Email</span>
           </a>
-          <a
-            href="https://wa.me/23408145564480"
-            class="hide flex w-fit items-end gap-10 rounded bg-black p-4 text-white transition-all delay-100 duration-100 hover:scale-105 md:gap-20 md:text-xl"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 50 50"
-              class="w-14 fill-lime-500"
-            >
+
+          <a href="https://github.com/I-Divine" target="_blank" rel="noopener"
+            class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-6 py-4 text-white transition-all hover:border-lime-500/50 hover:bg-white/10">
+            <svg class="h-6 w-6 text-lime-400" fill="currentColor" viewBox="0 0 24 24">
               <path
-                d="M 25 2 C 12.3 2 2 12.3 2 25 C 2 29.1 3.1 32.899219 5 36.199219 L 2 46.699219 C 1.9 46.999219 1.9992187 47.399219 2.1992188 47.699219 C 2.4992187 47.999219 2.8992187 48 3.1992188 48 L 14.199219 45.300781 C 17.399219 47.000781 21.1 48 25 48 C 37.7 48 48 37.7 48 25 C 48 12.3 37.7 2 25 2 z M 25 4 C 36.6 4 46 13.4 46 25 C 46 36.6 36.6 46 25 46 C 21.3 46 17.800781 45.000781 14.800781 43.300781 C 14.600781 43.200781 14.299609 43.099219 14.099609 43.199219 L 4.5 45.599609 L 7 36.400391 C 7.1 36.100391 7.0003906 35.899609 6.9003906 35.599609 C 5.1003906 32.499609 4 28.9 4 25 C 4 13.4 13.4 4 25 4 z M 18.113281 12.988281 C 17.925781 12.975781 17.800781 13 17.800781 13 L 16.599609 13 C 15.999609 13 15.100781 13.2 14.300781 14 C 13.800781 14.5 12 16.3 12 19.5 C 12 22.9 14.299609 25.799609 14.599609 26.099609 C 14.599609 26.099609 15 26.600781 15.5 27.300781 C 16 28.000781 16.699609 28.800781 17.599609 29.800781 C 19.399609 31.700781 21.899609 33.899219 25.099609 35.199219 C 26.499609 35.799219 27.699609 36.2 28.599609 36.5 C 30.199609 37 31.700781 36.900781 32.800781 36.800781 C 33.600781 36.700781 34.500391 36.299219 35.400391 35.699219 C 36.300391 35.099219 37.199609 34.400391 37.599609 33.400391 C 37.899609 32.600391 37.999609 31.900781 38.099609 31.300781 L 38.099609 30.5 C 38.099609 30.2 38.000781 30.200781 37.800781 29.800781 C 37.300781 29.000781 36.799219 29.000781 36.199219 28.800781 C 35.899219 28.600781 34.999219 28.200781 34.199219 27.800781 C 33.299219 27.400781 32.599609 27.000781 32.099609 26.800781 C 31.799609 26.700781 31.400391 26.499609 30.900391 26.599609 C 30.400391 26.699609 29.899609 27 29.599609 27.5 C 29.299609 27.9 28.200781 29.299219 27.800781 29.699219 L 27.699219 29.599609 C 27.299219 29.399609 26.7 29.200781 26 28.800781 C 25.2 28.400781 24.299219 27.800781 23.199219 26.800781 C 21.599219 25.400781 20.499219 23.699609 20.199219 23.099609 C 20.499219 22.699609 20.899609 22.3 21.099609 22 C 21.199609 21.9 21.280859 21.799219 21.349609 21.699219 C 21.418359 21.599219 21.475391 21.500391 21.525391 21.400391 C 21.625391 21.200391 21.700781 21.000781 21.800781 20.800781 C 22.200781 20.100781 22.000781 19.300391 21.800781 18.900391 C 21.800781 18.900391 21.7 18.600781 21.5 18.300781 C 21.4 18.000781 21.2 17.499609 21 17.099609 C 20.6 16.199609 20.2 15.199609 20 14.599609 C 19.7 13.899609 19.300781 13.399219 18.800781 13.199219 C 18.550781 13.049219 18.300781 13.000781 18.113281 12.988281 z M 16.599609 15 L 17.699219 15 L 17.900391 15 C 17.900391 15 17.999609 15.100391 18.099609 15.400391 C 18.299609 16.000391 18.799609 17.000391 19.099609 17.900391 C 19.299609 18.300391 19.499609 18.799609 19.599609 19.099609 C 19.699609 19.399609 19.800391 19.600781 19.900391 19.800781 C 19.900391 19.900781 20 19.900391 20 19.900391 C 19.8 20.300391 19.8 20.399219 19.5 20.699219 C 19.2 21.099219 18.799219 21.499219 18.699219 21.699219 C 18.599219 21.899219 18.299609 22.1 18.099609 22.5 C 17.899609 22.9 18.000781 23.599609 18.300781 24.099609 C 18.700781 24.699609 19.900781 26.700391 21.800781 28.400391 C 23.000781 29.500391 24.1 30.199609 25 30.599609 C 25.9 31.099609 26.600781 31.300391 26.800781 31.400391 C 27.200781 31.600391 27.599609 31.699219 28.099609 31.699219 C 28.599609 31.699219 29.000781 31.3 29.300781 31 C 29.700781 30.6 30.699219 29.399609 31.199219 28.599609 L 31.400391 28.699219 C 31.400391 28.699219 31.699609 28.8 32.099609 29 C 32.499609 29.2 32.900391 29.399609 33.400391 29.599609 C 34.300391 29.999609 35.100391 30.399609 35.400391 30.599609 L 36 30.900391 L 36 31.199219 C 36 31.599219 35.899219 32.200781 35.699219 32.800781 C 35.599219 33.100781 35.000391 33.699609 34.400391 34.099609 C 33.700391 34.499609 32.899609 34.800391 32.599609 34.900391 C 31.699609 35.000391 30.600781 35.099219 29.300781 34.699219 C 28.500781 34.399219 27.4 34.1 26 33.5 C 23.2 32.3 20.899219 30.3 19.199219 28.5 C 18.399219 27.6 17.699219 26.799219 17.199219 26.199219 C 16.699219 25.599219 16.500781 25.2 16.300781 25 C 15.900781 24.6 14 21.999609 14 19.599609 C 14 17.099609 15.200781 16.100391 15.800781 15.400391 C 16.100781 15.000391 16.499609 15 16.599609 15 z"
-              />
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
             </svg>
-            Whatsapp Me
+            <span>GitHub</span>
           </a>
-          <a
-            href="mailto:igwedinmaifechukwu@gmail.com"
-            class="hide flex w-fit items-end gap-10 rounded bg-black p-4 text-white transition-all delay-100 duration-100 hover:scale-105 md:gap-20 md:text-xl"
-          >
-            <svg
-              version="1.0"
-              class="w-14"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512.000000 512.000000"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <g
-                class="fill-lime-500"
-                transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                fill="#000000"
-                stroke="none"
-              >
-                <path
-                  d="M452 4620 c-109 -29 -187 -74 -272 -160 -87 -86 -131 -163 -160 -276
-         -18 -68 -20 -111 -20 -358 l0 -281 1118 -831 c614 -457 1145 -845 1179 -863
-         162 -81 364 -81 525 0 60 30 129 80 749 541 157 117 570 424 918 682 l631 470
-         0 281 c0 248 -2 291 -20 359 -29 113 -73 190 -160 276 -86 87 -163 131 -276
-         160 -76 20 -117 20 -2108 19 -1967 0 -2033 -1 -2104 -19z m4171 -409 c21 -13
-         50 -42 65 -64 26 -40 27 -44 30 -221 l3 -181 -1016 -755 c-558 -415 -1034
-         -765 -1057 -777 -54 -30 -122 -30 -176 0 -23 12 -498 362 -1056 777 l-1015
-         755 -1 160 c0 88 5 177 11 198 13 47 77 113 121 126 21 6 793 9 2043 8 l2010
-         -2 38 -24z"
-                />
-                <path
-                  d="M0 2027 c0 -977 1 -1017 20 -1091 29 -113 73 -190 160 -276 86 -87
-         163 -131 276 -160 76 -20 118 -20 2104 -20 1986 0 2028 0 2104 20 113 29 190
-         73 276 160 87 86 131 163 160 276 19 74 20 114 20 1091 0 557 -2 1013 -5 1013
-         -3 0 -92 -66 -200 -146 l-195 -145 -2 -868 -3 -867 -27 -41 c-15 -22 -44 -51
-         -65 -64 l-38 -24 -2026 0 -2025 0 -41 27 c-22 15 -51 44 -64 65 l-24 38 -3
-         867 -2 868 -196 145 c-107 80 -197 145 -199 145 -3 0 -5 -456 -5 -1013z"
-                />
-              </g>
+
+          <a href="https://www.linkedin.com/in/divine-i/" target="_blank" rel="noopener"
+            class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-6 py-4 text-white transition-all hover:border-lime-500/50 hover:bg-white/10">
+            <svg class="h-6 w-6 text-lime-400" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.239-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
             </svg>
-            Send an Email
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://wa.me/23408145564480" target="_blank" rel="noopener"
+            class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-6 py-4 text-white transition-all hover:border-lime-500/50 hover:bg-white/10">
+            <svg class="h-6 w-6 text-lime-400" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+            </svg>
+            <span>WhatsApp</span>
           </a>
         </div>
-        <div class="flex justify-center">
-          <p
-            class="w-max border-t-2 border-lime-500 p-8 text-center font-primary text-xl text-white"
-          >
-            Coded by
-            <a class="text-lime-500" href="https://github.com/I-Divine"
-              >Igwedinma Ifechukwu</a
-            >
-            © Design inspired by actual
-            <a href="/assets/images/panda-image.jpg" class="text-lime-500">
-              Pandas</a
-            >
-          </p>
-        </div>
-      </section>
-    </main>
-    <script defer>
-      const option = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      };
+      </div>
 
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("reveal");
-          }
-        });
-      }, option);
+      <!-- FOOTER -->
+      <footer class="mt-auto border-t border-white/10 pt-8 text-center text-sm text-neutral-500">
+        <p>
+          Coded by
+          <a class="text-lime-400 hover:underline" href="https://github.com/I-Divine">Igwedinma Ifechukwu</a>
+          © Design inspired by actual
+          <a href="/assets/images/panda-image.jpg" class="text-lime-400 hover:underline">Pandas</a>
+        </p>
+      </footer>
+    </section>
+  </main>
 
-      const hiddenElements = document.querySelectorAll(".hide");
-      hiddenElements.forEach((element) => revealObserver.observe(element));
+  <!-- INTERSECTION OBSERVER FOR ANIMATIONS & BUTTON SWAP -->
+  <script defer>
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15,
+    };
 
-      const resumeDownloadBtn = document.getElementById("resume-download");
-      const aboutSection = document.getElementById("about");
-      let isDownloadBtnOverlapping = false;
-      const collisionCheck = (element1, element2) => {
-        const domRect1 = element1.getBoundingClientRect();
-        const domRect2 = element2.getBoundingClientRect();
-
-        return !(
-          domRect1.top > domRect2.bottom ||
-          domRect1.right < domRect2.left ||
-          domRect1.bottom < domRect2.top ||
-          domRect1.left > domRect2.right
-        );
-      };
-
-      setInterval(() => {
-        isDownloadBtnOverlapping = collisionCheck(
-          aboutSection,
-          resumeDownloadBtn,
-        );
-        if (isDownloadBtnOverlapping) {
-          // console.log(isDownloadBtnOverlapping);
-          resumeDownloadBtn.classList.add("toWhite");
-          resumeDownloadBtn.style.backgroundColor = "white";
-        } else {
-          resumeDownloadBtn.classList.remove("toWhite");
-          resumeDownloadBtn.style.backgroundColor = "black";
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal");
         }
-      }, 50);
+      });
+    }, observerOptions);
 
-      // setInterval(
-      //   () => console.log(collisionCheck(aboutSection, resumeDownloadBtn)),
-      //   200,
-      // );
-    </script>
-  </body>
+    document.querySelectorAll(".hide").forEach((el) => revealObserver.observe(el));
+
+    // Adapt floating button contrast dynamically based on dark/light sections
+    const resumeDownloadBtn = document.getElementById("resume-download");
+    const aboutSection = document.getElementById("about");
+
+    if (resumeDownloadBtn && aboutSection) {
+      const overlapObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              resumeDownloadBtn.classList.remove("bg-lime-500", "text-black");
+              resumeDownloadBtn.classList.add("bg-white", "text-neutral-950");
+            } else {
+              resumeDownloadBtn.classList.remove("bg-white", "text-neutral-950");
+              resumeDownloadBtn.classList.add("bg-lime-500", "text-black");
+            }
+          });
+        },
+        { root: null, threshold: 0.1 }
+      );
+      overlapObserver.observe(aboutSection);
+    }
+  </script>
+</body>
+
 </html>
